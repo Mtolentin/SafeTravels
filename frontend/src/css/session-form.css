@@ -24,14 +24,16 @@
 
 .login-form-body input{
     margin: 15px 0 15px 0;
-    padding: 5px 0 5px 0;
-    width: 50%;
+    padding: 7.5px 5px 7.5px 5px;
+    width: 75%;
+    font-size: 20px;
 }
 
 .signup-form-body input{
     margin: 15px 0 15px 0;
-    padding: 5px 0 5px 0;
-    width: 50%;
+    padding: 7.5px 5px 7.5px 5px;
+    width: 75%;
+    font-size: 20px;
 }
 
 .errors-container{
@@ -53,4 +55,25 @@
     border-radius: 5px;
     padding: 5px;     
     margin: 5px 0 5px 0;
+    letter-spacing: 0.075rem;
+}
+
+.session-form-title{
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    margin: 10px 0 10px 0;
+}
+
+.session-input{
+    background: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.session-submit{
+    background: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 3px;   
 }

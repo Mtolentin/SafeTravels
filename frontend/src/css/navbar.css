@@ -19,6 +19,7 @@
     font-size: 18px;
     border: 1px solid transparent;
     border-radius: 5px;
+    letter-spacing: 0.075rem;     
 }
 
 .login-btn:first-child{
@@ -28,6 +29,8 @@
 #title{
     text-decoration: none;
     color: black;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .loggedin-links{
@@ -44,7 +47,8 @@
     font-size: 18px;
     border: 1px solid transparent;
     border-radius: 5px;
-    margin-right: 5px;        
+    margin-right: 5px;
+    letter-spacing: 0.075rem;        
 }
 
 .loggedin-btn.logout-btn{
