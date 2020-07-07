@@ -1,13 +1,18 @@
+require('dotenv').config()
 const mongoose = require('mongoose');
 const express = require("express");
 const app = express();
 const db = require('./config/keys').mongoURI;
+// const path = require('path');
 
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
 const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
+
+const uploads = require("./routes/api/uploads");
+
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -24,6 +29,10 @@ app.use(bodyParser.json());
 
 app.use("/api/users", users);
 app.use("/api/posts", posts);
+
+app.use("/api/document", uploads);
+
+// app.use(express.static(path.join(__dirname, "build")));
 
 const port = process.env.PORT || 4000;
 
