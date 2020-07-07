@@ -1,0 +1,63 @@
+
+
+.session-form-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.session-form-container{
+    width: 400px;
+    height: 400px; 
+    text-align: center;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);       
+}
+
+.signup-form-container-2{
+    width: 400px;
+    height: 500px; 
+    text-align: center;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);       
+}
+
+.login-form-body input{
+    margin: 15px 0 15px 0;
+    padding: 5px 0 5px 0;
+    width: 50%;
+}
+
+.signup-form-body input{
+    margin: 15px 0 15px 0;
+    padding: 5px 0 5px 0;
+    width: 50%;
+}
+
+.login-errors-list{
+    list-style: none;
+    position: absolute;
+    left: 42.65%;
+    bottom: 53%;
+    font-weight: bold;
+}
+
+.login-errors-list li{
+    padding: 10px;
+    background-color: firebrick;
+    color: whitesmoke;    
+}
+
+.signup-errors-list{
+    list-style: none;
+    position: absolute;
+    left: 39.25%;
+    bottom: 40%;
+    font-weight: bold;
+}
+
+.signup-errors-list li{
+    padding: 5px;
+    background-color: firebrick;
+    color: whitesmoke;    
+}
