@@ -5,8 +5,8 @@ class MainPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <footer className="footer-bar">
+      <div className="footer-bar">
+        <footer className="copyright">
           Copyright &copy; 2020
         </footer>
       </div>
