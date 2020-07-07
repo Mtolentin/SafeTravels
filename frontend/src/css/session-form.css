@@ -16,7 +16,7 @@
 
 .signup-form-container-2{
     width: 400px;
-    height: 500px; 
+    height: 575px; 
     text-align: center;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
     border-radius: 5px;       
@@ -34,30 +34,23 @@
     width: 50%;
 }
 
-.login-errors-list{
+.errors-container{
+    display: flex;
+    justify-content: center;
+}
+
+.errors-list{
     list-style: none;
-    position: absolute;
-    left: 42.65%;
-    bottom: 53%;
+    padding: 0;
+    width: 250px;
     font-weight: bold;
+    border-radius: 5px;          
 }
 
-.login-errors-list li{
-    padding: 10px;
+.errors-list li{
     background-color: firebrick;
-    color: whitesmoke;    
-}
-
-.signup-errors-list{
-    list-style: none;
-    position: absolute;
-    left: 39.25%;
-    bottom: 40%;
-    font-weight: bold;
-}
-
-.signup-errors-list li{
-    padding: 5px;
-    background-color: firebrick;
-    color: whitesmoke;    
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 5px;     
+    margin: 5px 0 5px 0;
 }
