@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const express = require("express");
 const app = express();
 const db = require('./config/keys').mongoURI;
+// const path = require('path');
 
 const bodyParser = require('body-parser');
 const passport = require('passport');
@@ -30,6 +31,8 @@ app.use("/api/users", users);
 app.use("/api/posts", posts);
 
 app.use("/api/document", uploads);
+
+// app.use(express.static(path.join(__dirname, "build")));
 
 const port = process.env.PORT || 4000;
 
