@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
+import '../../css/navbar.css';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -18,17 +18,17 @@ class NavBar extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
-        <div>
-          <Link to={'/products'}>See all Products</Link>
-          <Link to={'/posts'}>Write a Comment</Link>
-          <button onClick={this.logoutUser}>Logout</button>
+        <div className="loggedin-links">
+          <Link className='loggedin-btn' to={'/products'}>See all Products</Link>
+          <Link className='loggedin-btn' to={'/posts'}>Write a Comment</Link>
+          <button className='loggedin-btn logout-btn' onClick={this.logoutUser}>Logout</button>
         </div>
       );
     } else {
       return (
-        <div>
-          <Link to={'/signup'}>Signup</Link>
-          <Link to={'/login'}>Login</Link>
+        <div className="links">
+          <Link className='login-btn' to={'/signup'}>Sign Up</Link>
+          <Link className='login-btn' to={'/login'}>Log In</Link>
         </div>
       );
     }
@@ -36,10 +36,9 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Our Choices Matter</h1>
-     
-        {this.getLinks()}
+      <div className="navbar">
+        <h1><Link id="title" to='/'>Our Choices Matter</Link></h1>
+          {this.getLinks()}
       </div>
     );
   }

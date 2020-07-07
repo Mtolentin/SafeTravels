@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import '../../css/session-form.css';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -47,7 +48,7 @@ class LoginForm extends React.Component {
   // Render the session errors if there are any
   renderErrors() {
     return (
-      <ul>
+      <ul className="errors-list">
         {Object.keys(this.state.errors).map((error, i) => (
           <li key={`error-${i}`}>
             {this.state.errors[error]}
@@ -59,23 +60,31 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="login-form-container">
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              placeholder="Username"
-            />
-            <br />
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              placeholder="Password"
-            />
-            <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+          <div className="session-form-content">
+            <div className="session-form-container">
+  
+                <h1 className="session-form-title">Login into your account</h1>
+                <div className="login-form-body">
+                  <input className="session-input" type="text"
+                    value={this.state.username}
+                    onChange={this.update('username')}
+                    placeholder="Username"
+                  />
+                  <br />
+                  <input className="session-input" type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    placeholder="Password"
+                  />
+                  <br />
+                  <input className="session-submit" type="submit" value="Login" />
+                </div>
+                <div className="errors-container">
+                  {this.renderErrors()}
+                </div>
+            </div>
           </div>
         </form>
       </div>
