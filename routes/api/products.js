@@ -11,29 +11,30 @@ router.post('/',
     passport.authenticate('jwt', { session: false }),
     
     (req, res) => {
-        let { errors, isValid } = validateProductString(req.body.name);
-        { errors, isValid } += validateProductString(req.body.category);
-        { errors, isValid } += validateProductString(req.body.description);
+        //{errors, isValid}
+        let check = validateProductString(req.body.name);
+        check = validateProductString(req.body.category);
+        check = validateProductString(req.body.description);
 
         if (req.body.rating < 1 || req.body.rating > 5) {
-            errors.text = 'Rating must by between 1 and 5';
-            isValid = Object.keys(errors).length === 0;
+            check.errors.text += 'Rating must by between 1 and 5';
+            check.isValid += Object.keys(errors).length === 0;
         }
 
         if (req.body.link1) {
-            let {errors, isValid} = validateProductURL(req.body.link1);
+            let check = validateProductURL(req.body.link1);
         }
 
         if (req.body.link2) {
-            let { errors, isValid } = validateProductURL(req.body.link2);
+            let check = validateProductURL(req.body.link2);
         }
 
         if (req.body.keyword1) {
-            let { errors, isValid } = validateProductString(req.body.keyword1);
+            let check = validateProductString(req.body.keyword1);
         }
 
         if (req.body.keyword2) {
-            let { errors, isValid } = validateProductString(req.body.keyword2);
+            let check = validateProductString(req.body.keyword2);
         }
 
 
