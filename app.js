@@ -2,7 +2,10 @@ require('dotenv').config()
 const mongoose = require('mongoose');
 const express = require("express");
 const app = express();
+<<<<<<< HEAD
 const db = require('./config/keys').mongoURI;
+=======
+>>>>>>> master
 const path = require('path');
 
 const bodyParser = require('body-parser');
@@ -13,6 +16,8 @@ const posts = require("./routes/api/posts");
 
 const uploads = require("./routes/api/uploads");
 
+
+const db = require('./config/keys').mongoURI;
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -45,3 +50,9 @@ const port = process.env.PORT || 4000;
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/public'));
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'public', 'index.html'));
+  })
+}

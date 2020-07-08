@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 
 /node_modules
 /config/keys_dev.js
+=======
+/config/keys_dev.js
+/node_modules
+.env
+.DS_Store
+>>>>>>> master
