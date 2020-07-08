@@ -4,7 +4,10 @@ const User = require('../../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
-const keys = require('../../config/keys');
+
+//const keys = require('../../config/keys');
+keys = {secretOrKey: "secret"};
+
 
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
