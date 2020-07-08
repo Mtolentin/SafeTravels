@@ -2,10 +2,7 @@ require('dotenv').config()
 const mongoose = require('mongoose');
 const express = require("express");
 const app = express();
-<<<<<<< HEAD
 const db = require('./config/keys').mongoURI;
-=======
->>>>>>> master
 const path = require('path');
 
 const bodyParser = require('body-parser');

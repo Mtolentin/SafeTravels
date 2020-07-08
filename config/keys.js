@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 if (process.env.NODE_ENV === 'production') {
   module.exports = require('./keys_prod');
@@ -15,11 +14,3 @@ if (process.env.NODE_ENV === 'production') {
 //   AWS_URL_LINK: "https://s3-us-east-1.amazonaws.com/our-choices-matter/"
 // }
 
-=======
-// keys.js
-if (process.env.NODE_ENV === 'production') {
-    module.exports = require('./keys_prod');
-} else {
-    module.exports = require('./keys_dev');
-}
->>>>>>> master
