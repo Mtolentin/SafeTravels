@@ -4,7 +4,7 @@ const router = express.Router();
 const DOCUMENT = require("../../models/Document");
 const multer = require("multer");
 var AWS = require("aws-sdk");
-const keys = require('../../config/keys');
+//const keys = require('../../config/keys');
 
 // Multer ships with storage engines DiskStorage and MemoryStorage
 // And Multer adds a body object and a file or files object to the request object. The body object contains the values of the text fields of the form, the file or files object contains the files uploaded via the form.
@@ -45,18 +45,18 @@ router.post("/upload", upload.single("file"), function (req, res) {
   const s3FileURL = keys.AWS_URL_LINK;
 
   let s3bucket = new AWS.S3({
-    accessKeyId: keys.AWS_ACCESS_KEY_ID,
-    secretAccessKey: keys.AWS_SECRET_ACCESS_KEY,
-    region: keys.AWS_REGION
+    accessKeyId: AWS_ACCESS_KEY_ID,
+    secretAccessKey: AWS_SECRET_ACCESS_KEY,
+    region: AWS_REGION
   });
 
-  console.log(keys.AWS_ACCESS_KEY_ID);
-  console.log(keys.AWS_SECRET_ACCESS_KEY);
+  //console.log(keys.AWS_ACCESS_KEY_ID);
+  //console.log(keys.AWS_SECRET_ACCESS_KEY);
 
   //Where you want to store your file
 
   var params = {
-    Bucket: keys.AWS_BUCKET_NAME,
+    Bucket: AWS_BUCKET_NAME,
     Key: file.originalname,
     Body: file.buffer,
     ContentType: file.mimetype,
