@@ -64,7 +64,7 @@ class LoginForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div className="session-form-content">
             <div className="session-form-container">
-  
+              <img src={'https://our-choices-matter-seeds.s3.amazonaws.com/friends.jpg'} />
                 <h1 className="session-form-title">Login into your account</h1>
                 <div className="login-form-body">
                   <input className="session-input" type="text"
