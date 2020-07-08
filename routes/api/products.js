@@ -12,8 +12,8 @@ router.post('/',
     
     (req, res) => {
         let { errors, isValid } = validateProductString(req.body.name);
-        let { errors, isValid } = validateProductString(req.body.category);
-        let { errors, isValid } = validateProductString(req.body.description);
+        { errors, isValid } += validateProductString(req.body.category);
+        { errors, isValid } += validateProductString(req.body.description);
 
         if (req.body.rating < 1 || req.body.rating > 5) {
             errors.text = 'Rating must by between 1 and 5';

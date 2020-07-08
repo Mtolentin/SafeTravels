@@ -9,6 +9,7 @@ const passport = require('passport');
 
 const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
+const products = require("./routes/api/products");
 
 const uploads = require("./routes/api/uploads");
 
@@ -30,6 +31,7 @@ app.use(bodyParser.json());
 
 app.use("/api/users", users);
 app.use("/api/posts", posts);
+app.use("/api/products", products);
 
 app.use("/api/document", uploads);
 
