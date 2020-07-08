@@ -11,7 +11,6 @@ const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
 
 const uploads = require("./routes/api/uploads");
-const path = require('path');
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('frontend/build'));
