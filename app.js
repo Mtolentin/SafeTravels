@@ -47,6 +47,7 @@ var http = require('http');         // For serving a basic web page.
 // Here we find an appropriate database to connect to, defaulting to
 // localhost if we don't find one.
 var uristring =
+  process.env.mongoURI ||
   process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/HelloMongoose';
