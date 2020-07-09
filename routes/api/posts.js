@@ -33,7 +33,8 @@ router.post('/',
 
     const newPost = new Post({
       text: req.body.text,
-      user: req.user.id
+      user: req.user.id,
+      username: req.body.username
     });
 
     newPost.save().then(post => res.json(post));
