@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
   debugger
   const newPost = {
     text: '',
-    username: state.session.user.username
+    author: {user: state.session.user.id}
   }
 
 
