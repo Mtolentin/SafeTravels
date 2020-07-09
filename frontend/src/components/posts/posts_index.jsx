@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/posts.css';
 
 class PostsIndex extends React.Component{
     constructor(props){
@@ -22,14 +23,12 @@ class PostsIndex extends React.Component{
     }
 
     handleDelete = (post) => (e) => {
-        debugger;
         e.preventDefault();
         this.props.deletePost(post._id)
             .then(() => this.props.fetchPosts() );
     }
 
     handleSubmit(e){
-        debugger;
         e.preventDefault();
         this.props.composePost(this.state)
             .then(() => this.props.fetchPosts() );
@@ -58,7 +57,8 @@ class PostsIndex extends React.Component{
         })
 
         return(
-            <div style="display:inline-block;" className="posts">
+            // style="display:inline-block;"
+            <div className="posts">
                 <form onSubmit={this.handleSubmit}>
                     <textarea type="text" value={this.state.text} onChange={this.update('text')}/>
 
