@@ -7,21 +7,25 @@ class PostsIndex extends React.Component{
         this.state = this.props.newPost;
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.update = this.update.bind(this);        
+        this.update = this.update.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);        
     }
 
     componentDidMount(){
         this.props.fetchPosts();
     }
 
-    // componentDidUpdate(){
-    //     this.props.fetchPosts();
-    // }
-
     update(field){
         return e => {
             this.setState({[field]: e.currentTarget.value});
         }
+    }
+
+    handleDelete = (post) => (e) => {
+        debugger;
+        e.preventDefault();
+        this.props.deletePost(post._id)
+            .then(() => this.props.fetchPosts() );
     }
 
     handleSubmit(e){
@@ -40,8 +44,16 @@ class PostsIndex extends React.Component{
         }
 
         let posts_arr = this.props.posts[0].map((post) => {
+            
+            let buttons = this.state.author.user === post.author.user ?
+                (<div className="comment-btn"> <br/> <button>Edit Comment</button> <br/> <button onClick={this.handleDelete(post)}>Delete Comment</button></div>) : (null);
+
             return(
-                <li className="post" key={post._id}>{post.author.username} | {post.date} | {post.text}</li>
+                <li className="post" key={post._id}>
+                    {post.author.username} <br/> {post.date} <br/> {post.text} {buttons}
+                </li>
+                //Have a edit button as well. Only shows up if the current_user id matches with author id. 
+                //Have a delete button. Only shows up if the current_user id matches with author id.
             )
         })
 

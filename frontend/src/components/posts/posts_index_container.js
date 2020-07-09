@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchPosts, deletePost, composePost } from '../../actions/post_actions';
+import { fetchPosts, deletePost, composePost, updatePost } from '../../actions/post_actions';
 import PostIndex from './posts_index';
 
 const mapStateToProps = (state) => {
@@ -21,6 +21,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchPosts: () => dispatch(fetchPosts()),
     composePost: (data) => dispatch(composePost(data)),
+    updatePost: (data, post) => dispatch(updatePost(data, post)),
     deletePost: (postId) => dispatch(deletePost(postId))
   }
 }
