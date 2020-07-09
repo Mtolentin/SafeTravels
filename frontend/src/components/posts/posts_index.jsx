@@ -6,7 +6,8 @@ class PostsIndex extends React.Component{
 
         this.state = this.props.newPost;
 
-        this.handleSubmit = this.handleSubmit.bind(this);        
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.update = this.update.bind(this);        
     }
 
     componentDidMount(){
@@ -26,7 +27,9 @@ class PostsIndex extends React.Component{
     handleSubmit(e){
         debugger;
         e.preventDefault();
-        this.props.composePost(this.state);
+        this.props.composePost(this.state)
+            .then(() => this.props.fetchPosts() );
+        this.setState({text: ''});
     }    
 
 
@@ -38,7 +41,7 @@ class PostsIndex extends React.Component{
 
         let posts_arr = this.props.posts[0].map((post) => {
             return(
-                <li className="post" key={post._id}>{post.username} | {post.date} | {post.text}</li>
+                <li className="post" key={post._id}>{post.author.username} | {post.date} | {post.text}</li>
             )
         })
 
