@@ -5,6 +5,11 @@ module.exports = function validatePostInput(data) {
   let errors = {};
 
   data.text = validText(data.text) ? data.text : '';
+  // data.username = validText(data.username) ? data.username : '';
+
+  // if (Validator.isEmpty(data.username)) {
+  //   errors.username = 'Username field is required';
+  // }
 
   if (!Validator.isLength(data.text, { min: 1, max: 300 })) {
     errors.text = 'Post must be between 1 and 300 characters';
