@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../css/products.css';
+
 class LeftModuleIndex extends React.Component{
     constructor(props) { super(props); }
 
@@ -29,7 +30,7 @@ class LeftModuleIndex extends React.Component{
         })
         return (
             <div>
-                <ul className="posts-list">
+                <ul className="products-list">
                     {products_arr}
                 </ul>
             </div>

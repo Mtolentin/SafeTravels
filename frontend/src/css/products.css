@@ -1,3 +1,10 @@
+.products-list {
+    width: 50%;
+    display: inline-block;
+    margin-right: 21px;
+}
+
+
 .IProd1 {
     height: 300px;
     width: 300px;

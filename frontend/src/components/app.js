@@ -8,7 +8,7 @@ import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 
-//import PostsIndexContainer from './posts/posts_index_container';
+// import PostsIndexContainer from './posts/posts_index_container';
 import LeftModuleIndexContainer from './leftmodule/leftmodule_index_container';
 
 // import ProfileContainer from './profile/profile_container';

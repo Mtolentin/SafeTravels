@@ -46,7 +46,7 @@ class PostsIndex extends React.Component{
         })
 
         return(
-            <div className="posts">
+            <div style="display:inline-block;" className="posts">
                 <form onSubmit={this.handleSubmit}>
                     <textarea type="text" value={this.state.text} onChange={this.update('text')}/>
 
