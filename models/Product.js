@@ -18,6 +18,10 @@ const ProductSchema = new Schema({
         type: Number,
         required: true  
     },
+    pictureURL: {
+        type: String,
+        required: true
+    },
     link1: {
         type: String
     },

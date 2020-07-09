@@ -9,6 +9,7 @@ module.exports = function validateProductInput(data) {
     data.category = validText(data.category) ? data.category : '';
     data.description = validText(data.description) ? data.description : '';
     data.rating = validText(data.rating) ? data.rating : '';
+    data.pictureURL = validText(data.pictureURL) ? data.pictureURL : '';
 
     if (Validator.isEmpty(data.name)) {
         errors.text = 'This field is required! - Name';
@@ -25,6 +26,11 @@ module.exports = function validateProductInput(data) {
     if (Validator.isEmpty(data.rating)) {
         errors.text = 'This field is required! - Rating';
     }
+
+    if (Validator.isEmpty(data.pictureURL)) {
+        errors.text = 'This field is required! - PictureURL';
+    }
+
 
     if (!Validator.isIn(data.rating, ["1", "2", "3", "4", "5"])) {
         errors.text = 'Rating must be between 1 and 5';
