@@ -3,7 +3,6 @@ import { fetchPosts, deletePost, composePost, updatePost } from '../../actions/p
 import PostIndex from './posts_index';
 
 const mapStateToProps = (state) => {
-  debugger
   const newPost = {
     text: '',
     author: {user: state.session.user.id}

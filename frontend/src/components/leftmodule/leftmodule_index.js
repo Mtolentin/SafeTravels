@@ -29,7 +29,7 @@ class LeftModuleIndex extends React.Component{
 
         })
         return (
-            <div>
+            <div className="products">
                 <ul className="products-list">
                     {products_arr}
                 </ul>
