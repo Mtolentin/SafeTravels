@@ -7,11 +7,18 @@ class NavBar extends React.Component {
     super(props);
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
+
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
+  }
+
+  handleDemoLogin(e) {
+    e.preventDefault();
+    this.props.login(this.props.demoUser);
   }
 
   // Selectively render links dependent on whether the user is logged in
@@ -27,6 +34,7 @@ class NavBar extends React.Component {
     } else {
       return (
         <div className="links">
+          <button className='loggedin-btn logout-btn' onClick={this.handleDemoLogin}>Demo Login</button>
           <Link className='login-btn' to={'/signup'}>Sign Up</Link>
           <Link className='login-btn' to={'/login'}>Log In</Link>
         </div>
