@@ -1,7 +1,5 @@
 .products{
     display: inline-block;
-    position: absolute;
-    right: 0;
 }
 
 .products-list {
