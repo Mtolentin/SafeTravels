@@ -20,10 +20,10 @@ class LeftModuleIndex extends React.Component{
 
                 return (
                     <li className="product" key={product._id}>
-                        <img className = "IProd1"
+                        <img className = "product-image"
                             src = {`${product.pictureURL}`}>
                             </img>
-                        {product.name} | {product.description}
+                        <div className="product-text"><p className="product-text-2">{product.name} | {product.description}</p></div>
                     </li>
                 )
 

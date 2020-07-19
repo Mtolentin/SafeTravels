@@ -27,6 +27,10 @@
     margin-right: 5px;
 }
 
+.login-btn:last-child{
+    margin-left: 5px;
+}
+
 #title{
     text-decoration: none;
     color: black;
