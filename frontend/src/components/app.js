@@ -14,6 +14,7 @@ import LeftModuleIndexContainer from './leftmodule/leftmodule_index_container';
 // import ProfileContainer from './profile/profile_container';
 // import PostComposeContainer from './posts/post_compose_container';
 
+
 const App = () => (
   <div>
     <NavBarContainer />
@@ -22,7 +23,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
     </Switch>
-      <ProtectedRoute path="/index" component={PostsIndexContainer} />
+      <ProtectedRoute path="/index" component={PostsIndexContainer} /> 
       <ProtectedRoute path="/index" component={LeftModuleIndexContainer}/>
   </div>
 );
