@@ -45,7 +45,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <div className="navbar">
-        <h1><Link id="title" to='/'>Our Choices Matter</Link></h1>
+        <h1><Link id="title" to='/'>SafeTravels</Link></h1>
           {this.getLinks()}
       </div>
     );

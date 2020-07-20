@@ -58,7 +58,7 @@ class SignupForm extends React.Component {
       <div className="signup-form">
         <div className="signup-form-container">
             <div className="session-header">
-              <h1 id="session-logo">Our Choices Matter</h1>
+              <h1 id="session-logo">SafeTravels</h1>
             </div>          
           <form onSubmit={this.handleSubmit}>
             <div className="session-form-content">

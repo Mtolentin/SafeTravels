@@ -23,6 +23,12 @@
     letter-spacing: 0.075rem;     
 }
 
+.login-btn:hover{
+    text-decoration: none;
+    background-color: gray;
+    color: black;
+}
+
 .login-btn:first-child{
     margin-right: 5px;
 }
@@ -58,4 +64,10 @@
 
 .loggedin-btn.logout-btn{
     cursor: pointer;
+}
+
+.loggedin-btn.logout-btn:hover{
+    cursor: pointer;
+    background-color: gray;
+    color: black;
 }

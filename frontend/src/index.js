@@ -18,7 +18,10 @@ import { logout } from './actions/session_actions';
 
 // import 'normalize.css';
 import './css/reset.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/app.css';
+
+import './scss/custom.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

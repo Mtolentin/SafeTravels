@@ -63,7 +63,7 @@ class LoginForm extends React.Component {
       <div className="login-form">
         <div className="login-form-container">
           <div className="session-header">
-            <h1 id="session-logo">Our Choices Matter</h1>
+            <h1 id="session-logo">SafeTravels</h1>
           </div>          
           <form onSubmit={this.handleSubmit}>
             <div className="session-form-content">
