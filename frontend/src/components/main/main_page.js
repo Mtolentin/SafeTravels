@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../css/main-page.css';
+import Button from 'react-bootstrap/Button';
 
 class MainPage extends React.Component {
 
@@ -8,17 +9,44 @@ class MainPage extends React.Component {
       <div className="splash-page">
 
         <div className="splash-image">
-          <img id="image-content" src="https://mlp3dqjcgqiv.i.optimole.com/gg0613M-miO_raDW/w:auto/h:auto/q:auto/https://www.estria.org/wp-content/uploads/2018/07/Incarc_1200px.jpg" />
+          <img id="image-content" src="http://www.cityofmaysville.com/_uploads/work-in-progress.png" />
           <p id="description">
-            We all want to support products that are created ethically, and contribute to greater justice in our world— 
-            but finding such products can be complicated and time-consuming, and leave consumers overwhelmed. 
-            Our Choices Matter is an app that makes that process easier, by helping you find independent BIPOC-owned businesses 
-            and helping you avoid products made with exploitative labor practices— particularly sub-minimum-wage prison labor. 
-            While our app has a host of exciting products to discover and rate, we are also more than a consumer review app. 
-            We aim to build a larger community where all people interested in ethical labor practices can connect, ask questions, and organize. 
-            Join a community of other people who believe that even among all the complicated, 
-            structural problems in our world, we as individuals are never powerless. 
-            Our choices matter— and together, our choices can make a difference in service of the liberation of incarcerated folks.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Quisque pharetra sem at lectus maximus rhoncus.
+          Fusce ut ex vitae elit blandit cursus.
+          Phasellus urna dui, sodales venenatis justo at, faucibus aliquet massa.
+          Nunc et massa a arcu lobortis aliquam a et dolor.
+          Nunc ullamcorper ante nec finibus elementum.
+          Donec lacinia rhoncus ipsum, id tincidunt nulla semper in.
+          Ut mollis a lacus eget egestas.
+          Mauris tristique dapibus turpis volutpat dictum.
+          Mauris tempus urna lorem, id aliquet velit elementum sed.
+          Proin sapien risus, tincidunt vestibulum cursus vitae, bibendum non erat.
+          Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Maecenas vitae risus ac nisi gravida vehicula.
+          Aliquam accumsan rhoncus dui ac tempus.
+          Integer vitae vulputate nunc.
+
+
+          Cras luctus magna odio, a sagittis lectus tincidunt et.
+          Sed semper, dui sit amet condimentum ornare, ante ipsum pulvinar tellus, in blandit diam velit ac dolor.
+          Fusce ac congue magna.
+          In ac massa sit amet nibh consequat dapibus commodo nec nisi.
+          Quisque sed nibh feugiat, maximus ante ut, facilisis sem.
+          Aenean vitae varius lacus.
+          Sed sagittis sem quis ligula commodo porttitor.
+          Donec finibus ipsum a urna vulputate congue.
+
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Cras lacinia nisl quis tempus cursus.
+          Duis non elit enim.
+          Ut molestie fringilla finibus.
+          Cras finibus felis erat, eu sollicitudin mi tempus interdum.
+          Nullam vitae felis eget sem ultrices mattis a eu metus.
+          Duis consequat nec quam ac fermentum.
+          Pellentesque ac nisi nisi.
+          In hac habitasse platea dictumst.
           </p>
         </div>
 
