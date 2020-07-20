@@ -1,15 +1,36 @@
-.products{
+.products {
     display: inline-block;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px 10% 0 5px;
 }
 
 .products-list {
     width: 50%;
     display: inline-block;
-    margin-right: 21px;
+    margin-right: 20px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
 }
 
 
-.IProd1 {
+.product-image {
     height: 300px;
     width: 300px;
+    margin-right: 15%;
+}
+
+.product-text{
+    border: 1px solid black;
+    /* box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75); */
+    border-radius: 5px;      
+}
+
+.product-text-2{
+    text-align: center;
+    height: 100px;
+    width: 300px;      
 }
