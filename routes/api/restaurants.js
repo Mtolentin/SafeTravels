@@ -15,14 +15,13 @@ router.post('/',
 
 
         if (!isValid) {
-            return res.status(400).json(errors);
+           return res.status(400).json(errors);
         }
     
         if (Validator.isEmpty(req.body.category)) {
-            errors.text = 'This field is required! - category';
-            return res.status(400).json(errors);
+           errors.text = 'This field is required! - category';
+           return res.status(400).json(errors);
         }
-
         const newRestaurant = new Restaurant({
             name: req.body.name,
             description: req.body.description,

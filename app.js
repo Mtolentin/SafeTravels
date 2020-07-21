@@ -10,16 +10,19 @@ const passport = require('passport');
 
 const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
-const products = require("./routes/api/products");
-
+const restaurants = require("./routes/api/restaurants");
 const uploads = require("./routes/api/uploads");
 
+//const products = require("./routes/api/products");
+
+
+
 mongoose
-  .connect(db, { useNewUrlParser: true })
+.connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
 
-app.use(passport.initialize());
+  app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -38,6 +41,8 @@ app.use("/api/restaurants", restaurants);
 
 app.use("/api/document", uploads);
 
+
+//app.use("/api/products", products);
 // app.use(express.static(path.join(__dirname, "build")));
 
 const port = process.env.PORT || 4000;
