@@ -6,26 +6,32 @@ const ActivitySchema = new Schema({
         type: String,
         required: true
     },
+
     description: {
         type: String,
         required: true
     },
+
     latitude: {
         type: Number,
         required: true  
     },
+
     longitude: {
         type: Number,
         required: true  
     },
+
     pictureURL: {
         type: String,
         required: true
     },
+
     beginDate: {
         type: String,
         required: true
     },
+    
     endDate: {
         type: String,
         required: true
