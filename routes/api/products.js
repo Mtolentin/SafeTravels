@@ -22,11 +22,7 @@ router.post('/',
             category: req.body.category,
             description: req.body.description,
             rating: req.body.rating,
-            pictureURL: req.body.pictureURL,
-            link1: req.body.link1 || "",
-            link2: req.body.link2 || "",
-            keyword1: req.body.keyword1 || "",
-            keyword2: req.body.keyword2 || ""
+            pictureURL: req.body.pictureURL
         });
 
         newProduct.save().then(product => res.json(product));
