@@ -24,19 +24,15 @@ module.exports = function validateMultipleInput(data) {
     }
 
     if (Validator.isEmpty(data.longitude)) {
-        errors.text = 'This field is required! - longitude';
-    }
-
-    if (Validator.isEmpty(data.rating)) {
-        errors.text = 'This field is required! - Rating';
-    }
-
-    if (!Validator.isIn(data.rating, ["1", "2", "3", "4", "5"])) {
-        errors.text = 'Rating must be between 1 and 5';
+        errors.text = 'This field is required! - Longitude';
     }
 
     if (Validator.isEmpty(data.pictureURL)) {
         errors.text = 'This field is required! - PictureURL';
+    }
+
+    if (Validator.isEmpty(data.link1)) {
+        errors.text = 'This field is required! - Link1';
     }
 
     return {

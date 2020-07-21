@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use("/api/users", users);
 app.use("/api/posts", posts);
-app.use("/api/products", products);
+app.use("/api/restaurants", restaurants);
 
 app.use("/api/document", uploads);
 

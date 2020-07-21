@@ -12,14 +12,17 @@ const RestaurantSchema = new Schema({
         required: true
     },
 
-    address1: {
+    category: {
         type: String,
         required: true
     },
 
+    address1: {
+        type: String,
+    },
+
     address2: {
         type: String,
-        required: true
     },
 
     latitude: {
