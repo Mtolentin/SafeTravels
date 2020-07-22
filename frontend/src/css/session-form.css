@@ -4,22 +4,22 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .session-form-container{
     width: 400px;
     height: 400px; 
     text-align: center;
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-    border-radius: 5px;       
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);       
 }
 
 .signup-form-container-2{
     width: 400px;
     height: 575px; 
     text-align: center;
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
-    border-radius: 5px;       
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);      
 }
 
 .login-form-body input{
@@ -83,13 +83,21 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 25%;
+    background-image: url("https://www.atasteofsf.com/wp-content/uploads/2019/01/san-francisco-background.91.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;        
 }
+
+
 
 .signup-form{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 15%;
+    background-image: url("https://www.atasteofsf.com/wp-content/uploads/2019/01/san-francisco-background.91.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;     
 }
 
 #session-logo{
@@ -97,4 +105,7 @@
     margin: 40px auto 40px auto;
     font-weight: bold;
     text-align: center;
+    color: skyblue;    
+    letter-spacing: 0.05rem;
+    text-shadow: 2px 2px gray;    
 }
