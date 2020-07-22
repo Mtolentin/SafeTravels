@@ -1,10 +1,11 @@
 import { combineReducers } from "redux";
 import posts from './posts_reducer';
-import products from './products_reducer';
 
 const entitiesReducer = combineReducers({
     posts,
-    products
+    restaurants,
+    hotels,
+    activities
 });
   
 export default entitiesReducer;
