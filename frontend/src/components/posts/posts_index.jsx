@@ -46,8 +46,8 @@ class PostsIndex extends React.Component{
             
             let buttons = this.state.author.user === post.author.user ?
                 (<div className="comment-btn"> 
-                    <button className="comment-btns">Edit Comment</button>  
-                    <button className="comment-btns" onClick={this.handleDelete(post)}>Delete Comment</button>
+                    <button className="comment-btns edit-btn">Edit Comment</button>  
+                    <button className="comment-btns delete-btn" onClick={this.handleDelete(post)}>Delete Comment</button>
                 </div>) : (null);
 
             const options = {

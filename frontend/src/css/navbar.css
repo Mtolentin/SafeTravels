@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    border-bottom: 1px solid gray;    
+    border-bottom: 2px solid black;
+    background-color: #A9A9A9; 
 }
 
 .links{
@@ -25,7 +26,7 @@
 
 .login-btn:hover{
     text-decoration: none;
-    background-color: gray;
+    background-color: white;
     color: black;
 }
 
@@ -42,6 +43,8 @@
     color: black;
     font-size: 32px;
     font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-shadow: 2px 2px gray;
 }
 
 .loggedin-links{
@@ -62,12 +65,18 @@
     letter-spacing: 0.075rem;        
 }
 
+.loggedin-btn:hover{
+    text-decoration: none;
+    background-color: white;
+    color: black;        
+}
+
 .loggedin-btn.logout-btn{
     cursor: pointer;
 }
 
 .loggedin-btn.logout-btn:hover{
     cursor: pointer;
-    background-color: gray;
+    background-color: white;
     color: black;
 }
