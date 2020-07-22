@@ -45,11 +45,25 @@ class PostsIndex extends React.Component{
         let posts_arr = this.props.posts[0].map((post) => {
             
             let buttons = this.state.author.user === post.author.user ?
-                (<div className="comment-btn"> <br/> <button>Edit Comment</button> <br/> <button onClick={this.handleDelete(post)}>Delete Comment</button></div>) : (null);
+                (<div className="comment-btn"> 
+                    <button className="comment-btns">Edit Comment</button>  
+                    <button className="comment-btns" onClick={this.handleDelete(post)}>Delete Comment</button>
+                </div>) : (null);
+
+            const options = {
+                timeZone:"America/Los_Angeles",
+                hour12 : true,
+                hour:  "2-digit",
+                minute: "2-digit"
+            };
+            
+            let date = new Date(post.date).toLocaleDateString('en-US', options);
+
 
             return(
                 <li className="post" key={post._id}>
-                    {post.author.username} <br/> {post.date} <br/> {post.text} {buttons}
+                    <p className="comment-content">{post.author.username} ({date}) <br/> {post.text}</p> 
+                    {buttons}
                 </li>
                 //Have a edit button as well. Only shows up if the current_user id matches with author id. 
                 //Have a delete button. Only shows up if the current_user id matches with author id.
@@ -59,10 +73,10 @@ class PostsIndex extends React.Component{
         return(
             // style="display:inline-block;"
             <div className="posts">
-                <form onSubmit={this.handleSubmit}>
-                    <textarea type="text" value={this.state.text} onChange={this.update('text')}/>
+                <form id="comment-body" onSubmit={this.handleSubmit}>
+                    <textarea id="comment-submit" type="text" value={this.state.text} onChange={this.update('text')}/>
 
-                    <input type="submit" value="Make a Comment!"/>   
+                    <input className="comment-submit-btn" type="submit" value="Make a Comment!"/>   
                 </form>
                 <ul className="posts-list">
                     {posts_arr}

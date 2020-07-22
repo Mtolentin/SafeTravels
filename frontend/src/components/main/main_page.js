@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/main-page.css';
-import Button from 'react-bootstrap/Button';
+import Carousel from 'react-bootstrap/Carousel';
 
 class MainPage extends React.Component {
 
@@ -9,7 +9,45 @@ class MainPage extends React.Component {
       <div className="splash-page">
 
         <div className="splash-image">
-          <img id="image-content" src="http://www.cityofmaysville.com/_uploads/work-in-progress.png" />
+          <Carousel>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="http://www.cityofmaysville.com/_uploads/work-in-progress.png"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="http://www.cityofmaysville.com/_uploads/work-in-progress.png"
+                alt="Second slide"
+              />
+
+              <Carousel.Caption>
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="http://www.cityofmaysville.com/_uploads/work-in-progress.png"
+                alt="Third slide"
+              />
+
+              <Carousel.Caption>
+                <h3>Third slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+
+          {/* <img id="image-content" src="http://www.cityofmaysville.com/_uploads/work-in-progress.png" /> */}
           <p id="description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Quisque pharetra sem at lectus maximus rhoncus.

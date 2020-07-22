@@ -1,6 +1,12 @@
 $theme-colors: (
-  "primary": #000000,
-  "danger": #000fff
+  'navbar-btn': #0066CC
 );
+
+.carousel{
+  &.slide{
+    width: 75%;
+    margin: auto;
+  }
+}
 
 @import '~bootstrap/scss/bootstrap.scss';
