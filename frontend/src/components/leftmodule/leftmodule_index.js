@@ -7,39 +7,39 @@ import GoogleMapReact from 'google-map-react';
 class LeftModuleIndex extends React.Component{
     constructor(props) { super(props); }
 
-    componentDidMount() {
-        this.props.fetchProducts();
-    }
+    // componentDidMount() {
+    //     this.props.fetchProducts();
+    // }
 
     render() {
 
-        const {products} = this.props;
+        // const {products} = this.props;
 
-        if (products[0] === undefined) {
-            return null;
-        }
+        // if (products[0] === undefined) {
+        //     return null;
+        // }
 
-        let products_arr = products[0].map((product) => {
+        // let products_arr = products[0].map((product) => {
 
-                return (
-                    <li className="product" key={product._id}>
-                        <img className = "product-image"
-                            src = {`${product.pictureURL}`}>
-                            </img>
-                        <div className="product-text"><p className="product-text-2">{product.name} | {product.description}</p></div>
-                    </li>
-                )
+        //         return (
+        //             <li className="product" key={product._id}>
+        //                 <img className = "product-image"
+        //                     src = {`${product.pictureURL}`}>
+        //                     </img>
+        //                 <div className="product-text"><p className="product-text-2">{product.name} | {product.description}</p></div>
+        //             </li>
+        //         )
 
-        })
+        // })
         return (
             <div>
-            <div className="products">
+            {/* <div className="products">
                 <ul className="products-list">
                     {products_arr}
                 </ul>
                 
-            </div>
-            <div style={{ height: '400px', width: '700px' }}>
+            </div> */}
+            <div className="map" style={{ height: '400px', width: '700px' }}>
                     <GoogleMapReact
                         bootstrapURLKeys={{
                             key: "AIzaSyD08v3gCxdxpJfPbyVumLtw5qwPg2gPDTs",

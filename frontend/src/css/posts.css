@@ -1,5 +1,60 @@
 .posts{
     display: inline-block;
     position: absolute;
-    right: 0;    
+    right: 5%;
+    padding: 5px 25px 0 25px;
+    margin: 5px 15px 0 15px;    
+}
+
+#comment-submit{
+    border: 1px solid;
+    resize: none;
+    width: 400px;
+    height: 150px;
+}
+
+.comment-submit-btn{
+    display: block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    letter-spacing: 0.075rem;      
+}
+
+.comment-submit-btn:hover{
+    text-decoration: none;
+    background-color: gray;
+    color: black;
+}
+
+li.post{
+    border: 1px solid;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.comment-btns{
+    display: block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    letter-spacing: 0.075rem;
+    margin: 2.5px 0 2.5px 0;      
+}
+
+.comment-btns:hover{
+    text-decoration: none;
+    background-color: gray;
+    color: black;
 }
