@@ -10,24 +10,26 @@ import SignupFormContainer from './session/signup_form_container';
 
 import PostsIndexContainer from './posts/posts_index_container';
 import MapContainer from './map/map_container';
+import Footer from './footer/footer';
 
 // import ProfileContainer from './profile/profile_container';
 // import PostComposeContainer from './posts/post_compose_container';
 
 
 const App = () => (
-  <div>
+  <div className="safetravels">
     <NavBarContainer />
     <Switch>
       <AuthRoute exact path="/" component={MainPage} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
     </Switch>
-
-      <ProtectedRoute path="/index" component={PostsIndexContainer} />
-      <ProtectedRoute path="/index" component={PostsIndexContainer} /> 
-      <ProtectedRoute path="/index" component={MapContainer}/>
-  </div>
+      <div className="index-main">
+        <ProtectedRoute path="/index" component={MapContainer}/>
+        <ProtectedRoute path="/index" component={PostsIndexContainer} /> 
+      </div>
+      <Footer /> 
+  </div> 
 );
 
 export default App;

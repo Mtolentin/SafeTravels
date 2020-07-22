@@ -87,12 +87,6 @@ class MainPage extends React.Component {
           In hac habitasse platea dictumst.
           </p>
         </div>
-
-        <div className="footer-bar">
-          <footer className="copyright">
-            Copyright &copy; 2020
-          </footer>
-        </div>
       </div>
     );
   }

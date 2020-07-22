@@ -7,3 +7,14 @@ fieldset, label, input, textarea,
 span, article, footer, time, small, h3, select {
     font-family: 'Londrina Solid', cursive;
 }
+
+.safetravels{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.index-main {
+    display: flex;
+    justify-content: space-around;
+}

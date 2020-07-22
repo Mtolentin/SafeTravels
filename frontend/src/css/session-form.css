@@ -82,12 +82,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 25%;
 }
 
 .signup-form{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 15%;
 }
 
 #session-logo{
