@@ -30,12 +30,13 @@ class Map extends React.Component{
                         }}
                         defaultZoom={12}
                     >
-                        {this.props.restaurants[0].map(restaurant => 
+                        {this.props.restaurants[0].map((restaurant, i) => 
                         <Marker                     
                             lat={restaurant.latitude}
                             lng={restaurant.longitude}
                             name={restaurant.name}
                             color="blue"
+                            key={i}
                         />  
                         )}
            
