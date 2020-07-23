@@ -14,12 +14,10 @@ const HotelSchema = new Schema({
 
     address1: {
         type: String,
-        required: true
     },
 
     address2: {
         type: String,
-        required: true
     },
 
     latitude: {

@@ -18,18 +18,12 @@ router.post('/',
             return res.status(400).json(errors);
         }
 
-        if (Validator.isEmpty(req.body.endDate)) {
-            errors.text = 'This field is required! - End Date';
-            return res.status(400).json(errors);
-        }
         const newActivity = new Activity({
             name: req.body.name,
             description: req.body.description,
             latitude: req.body.latitude,
             longitude: req.body.longitude,
             pictureURL: req.body.pictureURL,
-            beginDate: req.body.beginDate || "",
-            endDate: req.body.endDate,
             link1: req.body.link1,
             link2: req.body.link2 || ""
         });

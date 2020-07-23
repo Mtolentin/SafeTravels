@@ -13,6 +13,9 @@ const posts = require("./routes/api/posts");
 const restaurants = require("./routes/api/restaurants");
 const uploads = require("./routes/api/uploads");
 
+const hotels = require("./routes/api/hotels");
+const activities = require("./routes/api/activities");
+
 //const products = require("./routes/api/products");
 
 
@@ -38,6 +41,9 @@ if (process.env.NODE_ENV === 'production') {
 app.use("/api/users", users);
 app.use("/api/posts", posts);
 app.use("/api/restaurants", restaurants);
+
+app.use("/api/hotels", hotels);
+app.use("/api/activities", activities);
 
 app.use("/api/document", uploads);
 
