@@ -27,14 +27,13 @@ const ActivitySchema = new Schema({
         required: true
     },
 
-    beginDate: {
+    link1: {
         type: String,
         required: true
     },
-    
-    endDate: {
+
+    link2: {
         type: String,
-        required: true
     },
 })
 module.exports = Activity = mongoose.model('Activity', ActivitySchema);
