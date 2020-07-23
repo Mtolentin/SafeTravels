@@ -28,8 +28,8 @@ const App = () => (
       <div className="index-main">
       <ProtectedRoute path="/index" component={SideNavContainer} /> 
 
-        {/* <ProtectedRoute path="/index" component={MapContainer}/>
-        <ProtectedRoute path="/index" component={PostsIndexContainer} />  */}
+        <ProtectedRoute path="/index" component={MapContainer}/>
+        <ProtectedRoute path="/index" component={PostsIndexContainer} /> 
       </div>
       <Footer /> 
   </div> 
