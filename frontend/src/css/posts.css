@@ -23,12 +23,13 @@
     font-size: 16px;
     border: 1px solid transparent;
     border-radius: 5px;
-    letter-spacing: 0.075rem;      
+    letter-spacing: 0.075rem;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);           
 }
 
 .comment-submit-btn:hover{
     text-decoration: none;
-    background-color: gray;
+    background-color: whitesmoke;
     color: #28a745;
 }
 
@@ -50,7 +51,8 @@ li.post{
     border: 1px solid transparent;
     border-radius: 5px;
     letter-spacing: 0.075rem;
-    margin: 2.5px 0 2.5px 0;      
+    margin: 2.5px 0 2.5px 0;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);           
 }
 
 .comment-btns.delete-btn{
@@ -59,7 +61,7 @@ li.post{
 }
 
 .comment-btns.delete-btn:hover{
-    background-color: gray;
+    background-color: whitesmoke;
     color: #dc3545;    
 }
 
@@ -69,6 +71,6 @@ li.post{
 }
 
 .comment-btns.edit-btn:hover{
-    background-color: gray;
+    background-color: whitesmoke;
     color: #ffc107;    
 }
