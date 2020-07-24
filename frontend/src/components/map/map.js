@@ -6,11 +6,22 @@ import '../../css/map.css';
 class Map extends React.Component{
     constructor(props) { 
         super(props); 
-    
+        this.state = {
+            center: {
+                lat: 37.77,
+                lng: -122.43
+            },
+            zoom: 13,
+            show: false
+        }
     }
 
     componentDidMount() {
         this.props.fetchRestaurants();
+    }
+
+    _onChildClick = (key, childProps) => {
+        this.setState({show: !this.state.show})
     }
 
     render() {
@@ -24,17 +35,15 @@ class Map extends React.Component{
                             key: "AIzaSyD08v3gCxdxpJfPbyVumLtw5qwPg2gPDTs",
                             language: 'en'
                         }}
-                        defaultCenter={{
-                            lat: 37.77,
-                            lng: -122.43
-                        }}
-                        defaultZoom={12}
+                        defaultCenter={this.state.center}
+                        defaultZoom={this.state.zoom}
+                        onChildChick={this._onChildClick}
                     >
                         {this.props.restaurants[0].map((restaurant, i) => 
                         <Marker                     
                             lat={restaurant.latitude}
                             lng={restaurant.longitude}
-                            name={restaurant.name}
+                            show={this.state.show}
                             color="blue"
                             key={i}
                         />  
