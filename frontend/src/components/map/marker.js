@@ -1,18 +1,25 @@
 import React from 'react';
 import '../../css/marker.css';
 
-const Marker = (props) => {
-  const { color, name, id } = props;
-  return (
+const Marker = (props) => (
+  <React.Fragment>
     <div>
       <div 
         className="pin bounce"
-        style={{ backgroundColor: color, cursor: 'pointer' }}
-        title={name}
+        style={{ backgroundColor: props.color, cursor: 'pointer' }}
+        title={props.name}
       />
       <div className="pulse" />
     </div>
-  );
-};
+      {props.show && (
+        <div
+          style={{
+            width: 100,
+            height: 100
+          }}
+        >Info window</div>
+      )}
+  </React.Fragment>
+);
 
 export default Marker;
