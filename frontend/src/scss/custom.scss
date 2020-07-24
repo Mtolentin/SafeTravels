@@ -2,11 +2,8 @@ $theme-colors: (
   'navbar-btn': #0066CC
 );
 
-.carousel{
-  &.slide{
-    width: 75%;
-    margin: auto;
-  }
+.carousel-item, .carousel-item.active {
+  align-items:center;
 }
 
 @import '~bootstrap/scss/bootstrap.scss';

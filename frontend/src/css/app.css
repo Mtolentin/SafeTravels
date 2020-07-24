@@ -14,7 +14,14 @@ span, article, footer, time, small, h3, select {
     min-height: 100vh;
 }
 
+.index-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: #B7AFA3;
+}
+
 .index-main {
     display: flex;
     justify-content: space-around;
+    background-color: #B7AFA3;
 }

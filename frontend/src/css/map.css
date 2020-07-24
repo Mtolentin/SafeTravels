@@ -1,3 +1,7 @@
 .google-map{
-    margin-top: 15px;
+    margin: 15px;
+    padding: 40px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);     
 }
