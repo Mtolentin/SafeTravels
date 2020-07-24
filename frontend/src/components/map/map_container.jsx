@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Map from './map';
+import MapCanvas from './map';
 import { fetchRestaurants } from '../../actions/restaurant_actions';
 
 const mapStateToProps = (state) => {
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Map);
+)(MapCanvas);
