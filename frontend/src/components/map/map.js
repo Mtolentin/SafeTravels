@@ -54,6 +54,7 @@ export class MapCanvas extends Component{
                         initialCenter={{ lat: 37.77, lng: -122.43}}
                         zoom={13}
                         onChildChick={this.onMapClicked}
+                        style={{ height: '400px', width: '700px' }}
                     >
                         {this.props.restaurants[0].map((restaurant, i) => 
                    
