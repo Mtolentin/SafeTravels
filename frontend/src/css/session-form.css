@@ -51,7 +51,7 @@
 
 .errors-list li{
     background-color: firebrick;
-    color: whitesmoke;
+    color: #F5FAFA;
     border-radius: 5px;
     padding: 5px;     
     margin: 5px 0 5px 0;
@@ -63,19 +63,33 @@
     font-weight: bold;
     letter-spacing: 0.05rem;
     margin: 10px 0 10px 0;
+    color: skyblue;
+    text-shadow: 2px 2px gray;    
+}
+
+.session-form-title.sign-up-title{
+    margin: 10px 0 0 0;   
 }
 
 .session-input{
-    background: whitesmoke;
+    background: #F5FAFA;
     border: 1px solid gray;
     border-radius: 3px;
     text-align: left;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);    
 }
 
 .session-submit{
-    background: whitesmoke;
+    background: skyblue;
     border: 1px solid gray;
-    border-radius: 3px;   
+    border-radius: 3px;
+    color: #F5FAFA;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);       
+}
+
+.session-submit:hover{
+    background-color: #F5FAFA;
+    color: skyblue;    
 }
 
 .login-form{

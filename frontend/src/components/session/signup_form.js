@@ -63,7 +63,7 @@ class SignupForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <div className="session-form-content">
               <div className="signup-form-container-2">
-                <h1 className="session-form-title">Sign up for an account!</h1>   
+                <h1 className="session-form-title sign-up-title">Sign up for an account!</h1>   
                 <div className="signup-form-body">
                   <br />
                   <input className="session-input" type="text"
