@@ -18,7 +18,9 @@ const activities = require("./routes/api/activities");
 
 //const products = require("./routes/api/products");
 
-
+const hotels = require("./routes/api/hotels");
+const activities = require("./routes/api/activities");
+const articles = require("./routes/api/articles");
 
 mongoose
 .connect(db, { useNewUrlParser: true })
@@ -46,6 +48,10 @@ app.use("/api/hotels", hotels);
 app.use("/api/activities", activities);
 
 app.use("/api/document", uploads);
+
+app.use("/api/hotels", hotels);
+app.use("/api/activities",activities);
+app.use("/api/articles", articles);
 
 
 //app.use("/api/products", products);
