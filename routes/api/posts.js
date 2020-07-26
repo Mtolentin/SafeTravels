@@ -22,6 +22,11 @@ router.get('/user/:user_id', (req, res) => {
     );
 });
 
+router.get('/article/:article_id', (req, res) => {
+  Post.find({ user: req.params.article_id })
+    .then(posts => res.json(posts))
+});
+
 router.post('/',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
