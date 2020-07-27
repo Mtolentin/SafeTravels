@@ -27,6 +27,6 @@ export const fetchArticles = () => dispatch => (
   
 export const fetchComments = id => dispatch => (
     ArticleUtil.getComments(id)
-        .then(posts => dispatch(receivePosts(posts)))
-        .catch(err => dispatch(receivePostErrors(err.response.data)))
+        .then(articles => dispatch(receiveArticles(articles)))
+        .catch(err => dispatch(receiveArticleErrors(err.response.data)))
 );
