@@ -5,5 +5,5 @@ export const getArticles = () => {
 }
 
 export const getComments = id => {
-    return axios.get(`/api/posts/article/${id}`);
+    return axios.get(`/api//article/${id}`);
   };

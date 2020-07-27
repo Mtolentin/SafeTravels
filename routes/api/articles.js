@@ -7,7 +7,7 @@ const Article = require('../../models/Article');
 const validateArticleInput = require('../../validation/articles');
 
 router.get('/', (req, res) => {
-  Post.find()
+  Article.find()
     .sort({ date: -1 })
     .then(articles => res.json(articles))
     .catch(err => res.status(404).json({ nopostsfound: 'No articles found' }));
