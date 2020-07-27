@@ -56,6 +56,7 @@ export class MapCanvas extends Component{
                         onChildChick={this.onMapClicked}
                         style={{ height: '400px', width: '700px' }}
                     >
+                        
                         {this.props.restaurants[0].map((restaurant, i) => 
                    
                         <Marker                

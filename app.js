@@ -18,8 +18,7 @@ const activities = require("./routes/api/activities");
 
 //const products = require("./routes/api/products");
 
-const hotels = require("./routes/api/hotels");
-const activities = require("./routes/api/activities");
+
 const articles = require("./routes/api/articles");
 
 mongoose
