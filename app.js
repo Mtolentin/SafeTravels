@@ -13,9 +13,6 @@ const posts = require("./routes/api/posts");
 const restaurants = require("./routes/api/restaurants");
 const uploads = require("./routes/api/uploads");
 
-const hotels = require("./routes/api/hotels");
-const activities = require("./routes/api/activities");
-
 //const products = require("./routes/api/products");
 
 const hotels = require("./routes/api/hotels");
