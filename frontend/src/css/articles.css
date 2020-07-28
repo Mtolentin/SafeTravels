@@ -7,6 +7,16 @@
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);        
 }
 
+.show-comments{
+    font-size: 20px;
+    letter-spacing: 0.05rem;
+}
+
+.show-comments:hover{
+    text-decoration: underline;
+}
+
+
 .show-comments.open {
     display: none;
 } 
