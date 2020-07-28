@@ -1,31 +1,24 @@
 import { connect } from 'react-redux';
-import { fetchPosts, deletePost, composePost, updatePost } from '../../actions/post_actions';
-import PostIndex from './posts_index';
+import ArticlesIndex from './articles_index';
+import { fetchArticles } from '../../actions/article_actions';
 
 const mapStateToProps = (state) => {
-    const newPost = {
-        text: '',
-        author: { user: state.session.user.id }
-    }
-
 
     return {
-        newPost: newPost,
-        posts: Object.values(state.entities.posts),
-        errors: state.errors.post
+        articles: Object.values(state.entities.articles),
+        errors: state.errors.article     
     };
-};
-
-const mapDispatchToProps = (dispatch) => {
+  };
+  
+  const mapDispatchToProps = (dispatch) => {
     return {
-        fetchPosts: () => dispatch(fetchPosts()),
-        composePost: (data) => dispatch(composePost(data)),
-        updatePost: (data, post) => dispatch(updatePost(data, post)),
-        deletePost: (postId) => dispatch(deletePost(postId))
+        fetchArticles: () => dispatch(fetchArticles())
     }
-}
+  }
+
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(PostIndex);
+
+  )(ArticlesIndex);

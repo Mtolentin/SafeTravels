@@ -43,6 +43,10 @@ class PostsIndex extends React.Component{
         }
 
         let posts_arr = this.props.posts[0].map((post) => {
+
+            if(post.origin !== this.props.articleID){
+                return null;
+            }
             
             let buttons = this.state.author.user === post.author.user ?
                 (<div className="comment-btn"> 
