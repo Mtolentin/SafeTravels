@@ -14,7 +14,7 @@ export const receiveArticle = article => ({
     article
 });
 
-export const receiveArticlerrors = errors => ({
+export const receiveArticleErrors = errors => ({
     type: RECEIVE_ARTICLE_ERRORS,
     errors
 });

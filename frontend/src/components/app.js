@@ -10,6 +10,7 @@ import SideNavContainer from './sideNav/sideNav_container';
 import PostsIndexContainer from './posts/posts_index_container';
 import MapContainer from './map/map_container';
 import Footer from './footer/footer';
+import ArticleIndexContainer from './articles/articles_index_container';
 // import SideNav from './sidenav/sidenav';
 
 
@@ -24,7 +25,8 @@ const App = () => (
       <div className="index-main">
         <ProtectedRoute path="/index" component={SideNavContainer} /> 
         <ProtectedRoute path="/index" component={MapContainer}/>
-        <ProtectedRoute path="/index" component={PostsIndexContainer} /> 
+        {/* <ProtectedRoute path="/index" component={PostsIndexContainer} />  */}
+        <ProtectedRoute path="/index" component={ArticleIndexContainer} /> 
       </div>
       <Footer /> 
   </div> 

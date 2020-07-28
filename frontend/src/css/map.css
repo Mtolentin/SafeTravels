@@ -3,5 +3,7 @@
     padding: 40px;
     background-color: whitesmoke;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);     
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+    height: 400px;
+    width: 700px; 
 }
