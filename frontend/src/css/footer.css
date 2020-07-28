@@ -1,8 +1,7 @@
 .footer-bar{
-    /* border-top: 2px solid gray; */
     background-color: #E8D0A9;
     flex: 1;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);     
+    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.25);     
 }
 
 .copyright{
