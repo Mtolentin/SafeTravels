@@ -243,3 +243,14 @@ ul.CTAs a {
         display: none;
     }
 }
+
+.list-unstyled li{
+    letter-spacing: 0.05rem;
+    font-size: 20px;
+    color: skyblue;
+    text-shadow: 2px 2px gray;
+}
+
+.list-unstyled li:hover{
+    cursor: pointer;
+}
