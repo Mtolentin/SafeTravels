@@ -39,7 +39,7 @@ class ArticlesIndex extends React.Component{
                     <button className={`show-comments ${revealComments}`} onClick={this.showComments}>Show Comments</button> 
 
                     <div className={`comments-section ${revealComments}`}>
-                        <button onClick={this.showComments}>Hide Comments</button> 
+                        <button className="show-comments" onClick={this.showComments}>Hide Comments</button> 
                         <h4>Comments</h4>
                         <PostIndexContainer articleID={article._id} />
                     </div>
