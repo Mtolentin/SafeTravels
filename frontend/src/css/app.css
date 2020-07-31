@@ -20,7 +20,10 @@ span, article, footer, time, small, h3, select {
     background-color: #B7AFA3;
 }
 
-.index-main {
+.index-main,
+.restaurant-main,
+.hotel-main,
+.activity-main {
     display: flex;
     justify-content: space-around;
     background-color: #B7AFA3;

@@ -13,7 +13,7 @@ const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
 const restaurants = require("./routes/api/restaurants");
 const uploads = require("./routes/api/uploads");
-const activities = require("./routes/api/hotels");
+const activities = require("./routes/api/activities");
 
 //const products = require("./routes/api/products");
 
