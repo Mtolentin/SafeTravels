@@ -8,10 +8,12 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
+const hotels = require("./routes/api/hotels");
 const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
 const restaurants = require("./routes/api/restaurants");
 const uploads = require("./routes/api/uploads");
+const activities = require("./routes/api/hotels");
 
 //const products = require("./routes/api/products");
 
