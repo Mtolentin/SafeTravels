@@ -1,6 +1,6 @@
 import {
     RECEIVE_ARTICLES,
-    RECIEVE_ARTICLE
+    RECEIVE_ARTICLE
 } from '../actions/article_actions';
 
 export default function (state = {}, action) {
@@ -9,7 +9,7 @@ export default function (state = {}, action) {
     switch (action.type) {
         case RECEIVE_ARTICLES:
             return action.articles;
-        case RECIEVE_ARTICLE:
+        case RECEIVE_ARTICLE:
             return action.article;
         default:
             return state;

@@ -48,13 +48,14 @@ export class MapCanvas extends Component{
         if (!this.props.restaurants[0]) return null;
         console.log(this.props.restaurants[0][0]);
         return (
-            <div className="google-map" style={{ height: '400px', width: '700px' }}>
+            <div className="google-map">
                     <Map
+                        className="google-map-2"
                         google={this.props.google}
                         initialCenter={{ lat: 37.77, lng: -122.43}}
                         zoom={13}
                         onChildChick={this.onMapClicked}
-                        style={{ height: '400px', width: '700px' }}
+                        containerStyle={{position: 'relative', height: '400px', width: '700px' }}
                     >
                         
                         {this.props.restaurants[0].map((restaurant, i) => 
