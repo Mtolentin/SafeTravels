@@ -30,6 +30,7 @@ class PostsIndex extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
+        // debugger;
         this.props.composePost(this.state)
             .then(() => this.props.fetchPosts() );
         this.setState({text: ''});
@@ -41,6 +42,8 @@ class PostsIndex extends React.Component{
         if(this.props.posts[0] === undefined){
             return null;
         }
+
+        // debugger;
 
         let posts_arr = this.props.posts[0].map((post) => {
 

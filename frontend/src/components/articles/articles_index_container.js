@@ -1,10 +1,19 @@
 import { connect } from 'react-redux';
 import ArticlesIndex from './articles_index';
-import { fetchArticles } from '../../actions/article_actions';
+import { fetchArticles, composeArticle } from '../../actions/article_actions';
 
 const mapStateToProps = (state) => {
 
+  const newArticle = {
+    title: '',
+    body: '',
+    link: '',
+  }
+
+  debugger;
+
     return {
+        newArticle: newArticle,
         articles: Object.values(state.entities.articles),
         errors: state.errors.article     
     };
@@ -12,7 +21,8 @@ const mapStateToProps = (state) => {
   
   const mapDispatchToProps = (dispatch) => {
     return {
-        fetchArticles: () => dispatch(fetchArticles())
+        fetchArticles: () => dispatch(fetchArticles()),
+        composeArticle: data => dispatch(composeArticle(data))
     }
   }
 

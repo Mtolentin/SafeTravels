@@ -8,6 +8,7 @@ const mapStateToProps = (state) => {
     author: {user: state.session.user.id}
   }
 
+  // debugger;
 
   return {
       newPost: newPost,

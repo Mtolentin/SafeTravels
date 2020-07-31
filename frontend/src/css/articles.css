@@ -7,6 +7,15 @@
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);        
 }
 
+.articles-form{
+    /* display: inline-grid; */
+    padding: 35px;
+    margin: 15px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);        
+}
+
 .show-comments{
     font-size: 20px;
     letter-spacing: 0.05rem;
@@ -23,4 +32,16 @@
 
 .comments-section.closed {
     display: none;
+}
+
+#article-body{
+    display: inline-grid;
+}
+
+.article-input{
+    border: 1px solid black;
+}
+
+#article-body-submit{
+    border: 1px solid black;
 }
