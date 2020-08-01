@@ -38,6 +38,7 @@ router.post('/',
 
     const newPost = new Post({
       text: req.body.text,
+      // origin: req.params.article_id,
       author: {user: req.user.id,
         username: req.user.username}
     });

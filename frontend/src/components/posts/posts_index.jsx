@@ -30,6 +30,9 @@ class PostsIndex extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
+        // debugger;
+        this.setState({origin: this.props.articleID});
+        // debugger;
         this.props.composePost(this.state)
             .then(() => this.props.fetchPosts() );
         this.setState({text: ''});
@@ -43,7 +46,7 @@ class PostsIndex extends React.Component{
         }
 
         let posts_arr = this.props.posts[0].map((post) => {
-
+            // debugger;
             if(post.origin !== this.props.articleID){
                 return null;
             }
@@ -51,7 +54,7 @@ class PostsIndex extends React.Component{
             let buttons = this.state.author.user === post.author.user ?
                 (<div className="comment-btn"> 
                     <button className="comment-btns edit-btn">Edit Comment</button>  
-                    <button className="comment-btns delete-btn" onClick={this.handleDelete(post)}>Delete Comment</button>
+                    <button className="comment-btns delete-btn">Delete Comment</button>
                 </div>) : (null);
 
             const options = {

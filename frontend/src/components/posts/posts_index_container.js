@@ -5,9 +5,11 @@ import PostIndex from './posts_index';
 const mapStateToProps = (state) => {
   const newPost = {
     text: '',
+    origin: '',
     author: {user: state.session.user.id}
   }
 
+  // debugger;
 
   return {
       newPost: newPost,

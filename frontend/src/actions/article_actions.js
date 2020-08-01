@@ -24,6 +24,12 @@ export const fetchArticles = () => dispatch => (
       .then(articles => dispatch(receiveArticles(articles)))
       .catch(err => dispatch(receiveArticleErrors(err.response.data)))
 );
+
+export const composeArticle = data => dispatch => (
+    ArticleUtil.writeArticle(data)
+        .then(post => dispatch(receiveArticle(post)))
+        .catch(err => dispatch(receiveArticleErrors(err.response.data)))
+);
   
 export const fetchComments = id => dispatch => (
     ArticleUtil.getComments(id)
