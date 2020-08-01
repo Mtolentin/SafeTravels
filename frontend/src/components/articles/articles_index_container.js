@@ -10,8 +10,6 @@ const mapStateToProps = (state) => {
     link: '',
   }
 
-  debugger;
-
     return {
         newArticle: newArticle,
         articles: Object.values(state.entities.articles),

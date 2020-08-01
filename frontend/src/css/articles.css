@@ -34,14 +34,35 @@
     display: none;
 }
 
-#article-body{
-    display: inline-grid;
-}
-
 .article-input{
+    display: block;
     border: 1px solid black;
+    width: 100%;
 }
 
 #article-body-submit{
+    display: block;    
     border: 1px solid black;
+    min-height: 100px;
+    max-height: 200px;
+    width: 100%;
+}
+
+.article-submit-btn{
+    display: block;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    letter-spacing: 0.075rem;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);      
+}
+
+.article-form-content{
+    display: flex;
+    flex-direction: column;
 }

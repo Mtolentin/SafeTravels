@@ -7,7 +7,7 @@ class ArticlesIndex extends React.Component{
         super(props);
         this.state = {
             newArticle: this.props.newArticle,
-            toggleComments: false
+            activeID: ''
         };
         this.update = this.update.bind(this);
         this.showComments = this.showComments.bind(this);
@@ -30,20 +30,16 @@ class ArticlesIndex extends React.Component{
         }
     }    
 
-    showComments(){
-        if(this.state.toggleComments === false){
-            this.setState({toggleComments: true});
-        }else{
-            this.setState({toggleComments: false})
-        }
+    showComments(id){
+        this.setState({
+            activeID: id
+        });
     }
 
     handleSubmit(e){
         e.preventDefault();
-        debugger;
         this.props.composeArticle(this.state.newArticle)
             .then(() => {
-                debugger;
                 this.props.fetchArticles()} );
         this.setState({
             newArticle: {           
@@ -59,11 +55,9 @@ class ArticlesIndex extends React.Component{
             return null;
         }
 
-        debugger;
-
         let articles_arr = this.props.articles[0].map((article) => {
 
-            let revealComments = this.state.toggleComments ? 'open' : 'closed';
+            let revealComments = (this.state.activeID === article._id) ? 'open' : 'closed';
 
             return (            
                 <li className="article" key={article._id}>
@@ -71,10 +65,10 @@ class ArticlesIndex extends React.Component{
                     <p>{article.body}</p>
                     <a href={`${article.link}`}>{article.link}</a>
                     <br/>
-                    <button className={`show-comments ${revealComments}`} onClick={this.showComments}>Show Comments</button> 
+                    <button className={`show-comments ${revealComments}`} onClick={() => this.showComments(article._id)}>Show Comments</button> 
 
                     <div className={`comments-section ${revealComments}`}>
-                        <button className="show-comments" onClick={this.showComments}>Hide Comments</button> 
+                        <button className="show-comments" onClick={() => this.showComments('')}>Hide Comments</button> 
                         <h4>Comments</h4>
                         <PostIndexContainer articleID={article._id} />
                     </div>
@@ -87,15 +81,18 @@ class ArticlesIndex extends React.Component{
             <div className="articles-main">
                 <div className="articles-form">
                     <form id="article-body" onSubmit={this.handleSubmit}>
-                        <label>Title
-                            <input className="article-input" type="text" value={this.state.newArticle.title} onChange={this.update('title')}/>
-                        </label>
-                        <label>Body
-                            <textarea id="article-body-submit" type="text" value={this.state.newArticle.body} onChange={this.update('body')}/>
-                        </label>
-                        <label>Link
-                            <input className="article-input" type="text" value={this.state.newArticle.link} onChange={this.update('link')}/>
-                        </label>
+                        <h3 id="article-form-title">Submit an Article</h3>
+                        <div className="article-form-content">
+                            <label>Title
+                                <input className="article-input" type="text" value={this.state.newArticle.title} onChange={this.update('title')}/>
+                            </label>
+                            <label>Body
+                                <textarea id="article-body-submit" type="text" value={this.state.newArticle.body} onChange={this.update('body')}/>
+                            </label>
+                            <label>Link
+                                <input className="article-input" type="text" value={this.state.newArticle.link} onChange={this.update('link')}/>
+                            </label>
+                        </div>
                         <input className="article-submit-btn" type="submit" value="Submit Article"/>   
                     </form>
                 </div>
