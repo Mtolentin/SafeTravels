@@ -25,7 +25,7 @@ const App = () => (
     </Switch>
       <div className="index-main">
         <ProtectedRoute path="/index" component={SideNavContainer} /> 
-        <ProtectedRoute path="/index" component={MapContainer} />  
+        <ProtectedRoute path="/index" component={MapContainer} />
         <ProtectedRoute path="/index" component={ArticleIndexContainer} /> 
       </div>
       <div className="restaurant-main">
