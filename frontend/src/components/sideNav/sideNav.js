@@ -5,7 +5,9 @@ class SideNav extends React.Component {
     //constructor(props) { super(props); }
 
     componentDidMount() {
+        // this.props.fetchHotels();
         this.props.fetchRestaurants();
+        // this.props.fetchActivities();
     }
 
     render() {
@@ -16,20 +18,28 @@ class SideNav extends React.Component {
 
 
                         
-                        <button type="button" id="sidebarCollapse" className="btn btn-info">
+                        <button type="button" id="sidebarCollapse" 
+                        className="btn btn-info">
                             <span>Toggle Sidebar</span>
                         </button>
-                        <button className="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button className="btn btn-dark d-inline-block d-lg-none ml-auto" 
+                            type="button" data-toggle="collapse" 
+                            data-target="#navbarSupportedContent" 
+                            aria-controls="navbarSupportedContent" 
+                            aria-expanded="false" 
+                            aria-label="Toggle navigation">
                         </button>
 
                         
                     </div>
                     <ul className="list-unstyled components">
                         <li>
-                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
+                            <a href="#pageSubmenu" data-toggle="collapse" 
+                            aria-expanded="false" className="dropdown-toggle">
                                 Hotels
                             </a>
-                            <ul className="collapse list-unstyled" id="pageSubmenu">
+                            <ul className="collapse list-unstyled" 
+                                id="pageSubmenu">
                                 <li>
                                     <a href="/">Test 1</a>
                                 </li>
@@ -41,21 +51,51 @@ class SideNav extends React.Component {
                                 </li>
                             </ul>
                         </li>
+
                         <li>
-                            <a href="/">
-                                Restaurants
+                            <a href="#pageSubmenu" data-toggle="collapse" 
+                                aria-expanded="false" className="dropdown-toggle">
+                                    Restaurants
                             </a>
+                            <ul className="collapse list-unstyled" 
+                                id="pageSubmenu">
+                                <li>
+                                    <a href="/">Test 1</a>
+                                </li>
+                                <li>
+                                    <a href="/">Test 2</a>
+                                </li>
+                                <li>
+                                    <a href="/">Test 3</a>
+                                </li>
+                            </ul>
                         </li>
+
                         <li>
-                            <a href="/">
-                                Activities
+                        <a href="#pageSubmenu" data-toggle="collapse" 
+                                aria-expanded="false" className="dropdown-toggle">
+                                    Activities
                             </a>
+                            <ul className="collapse list-unstyled" 
+                                id="pageSubmenu">
+                                <li>
+                                    <a href="/">Test 1</a>
+                                </li>
+                                <li>
+                                    <a href="/">Test 2</a>
+                                </li>
+                                <li>
+                                    <a href="/">Test 3</a>
+                                </li>
+                            </ul>
                         </li>
+
                         <li>
                             <a href="/">
                                 The Team
                             </a>
                         </li>
+
                     </ul>
                 </nav>
             </div>
