@@ -36,12 +36,23 @@ router.post('/',
       return res.status(400).json(errors);
     }
 
+    // const newPost = new Post({
+    //   text: req.body.text,
+    //   origin: req.params.article_id,
+    //   author: {user: req.user.id,
+    //     username: req.user.username}
+    // });
+
+    //console.log(req.body);
+
     const newPost = new Post({
       text: req.body.text,
-      // origin: req.params.article_id,
+      origin: req.body.origin,
       author: {user: req.user.id,
         username: req.user.username}
     });
+
+    //console.log(newPost);
 
     newPost.save().then(post => res.json(post));
   }
