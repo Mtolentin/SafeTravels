@@ -6,7 +6,6 @@ class PostsIndex extends React.Component{
         super(props);
 
         this.state = this.props.newPost;
-
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
         this.handleDelete = this.handleDelete.bind(this);        
@@ -31,11 +30,16 @@ class PostsIndex extends React.Component{
     handleSubmit(e){
         e.preventDefault();
         // debugger;
-        this.setState({origin: this.props.articleID});
-        // debugger;
-        this.props.composePost(this.state)
-            .then(() => this.props.fetchPosts() );
-        this.setState({text: ''});
+        
+        this.setState({
+            origin: this.props.articleID
+        }, () => {
+            this.props.composePost(this.state)
+                .then(() => this.props.fetchPosts())
+                .then(() => this.setState({text: ''}));
+        });
+
+        //this.setState({text: ''});
     }    
 
 
