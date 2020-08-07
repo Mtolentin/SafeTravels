@@ -43,7 +43,7 @@ router.post('/',
     //     username: req.user.username}
     // });
 
-    //console.log(req.body);
+    console.log(req.body);
 
     const newPost = new Post({
       text: req.body.text,
