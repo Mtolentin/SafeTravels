@@ -43,8 +43,6 @@ router.post('/',
     //     username: req.user.username}
     // });
 
-    console.log(req.body);
-
     const newPost = new Post({
       text: req.body.text,
       origin: req.body.origin,
@@ -57,5 +55,18 @@ router.post('/',
     newPost.save().then(post => res.json(post));
   }
 );
+
+router.delete('/:id', function (req, res) {
+  
+  console.log(req);
+  Post.deleteOne( { _id: req.body.id } );
+
+});
+
+router.patch('/:id', function (req, res) {
+
+  Post.updateOne( { text: req.body.text } );
+
+});
 
 module.exports = router;

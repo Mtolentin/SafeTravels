@@ -23,6 +23,7 @@ class PostsIndex extends React.Component{
 
     handleDelete = (post) => (e) => {
         e.preventDefault();
+        debugger;
         this.props.deletePost(post._id)
             .then(() => this.props.fetchPosts() );
     }
@@ -58,7 +59,8 @@ class PostsIndex extends React.Component{
             let buttons = this.state.author.user === post.author.user ?
                 (<div className="comment-btn"> 
                     <button className="comment-btns edit-btn">Edit Comment</button>  
-                    <button className="comment-btns delete-btn">Delete Comment</button>
+                    <button className="comment-btns delete-btn" onClick={this.handleDelete}>Delete Comment</button>
+
                 </div>) : (null);
 
             const options = {
