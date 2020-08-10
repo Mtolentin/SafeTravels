@@ -51,6 +51,6 @@ export const updatePost = (data, post) => dispatch => (
 
 export const deletePost = postId => dispatch => (
     PostUtil.deletePost(postId)
-        .then(() => dispatch(removePost(postId)))
+        .then(postId => dispatch(removePost(postId)))
         .catch(err => dispatch(receivePostErrors(err.response.data)))
 );

@@ -58,14 +58,24 @@ router.post('/',
 
 router.delete('/:id', function (req, res) {
   
-  console.log(req);
-  Post.deleteOne( { _id: req.body.id } );
+  //console.log(req);
+  Post.deleteOne( { _id: req.params.id } )
+    .catch(err =>
+      res.status(404).json({ nopostsfound: 'No posts found for that id' }
+    )
+  );
+
+  console.log('item deleted');
 
 });
 
 router.patch('/:id', function (req, res) {
 
-  Post.updateOne( { text: req.body.text } );
+  Post.updateOne( { text: req.body.text } )
+    .catch(err =>
+      res.status(404).json({ nopostsfound: 'No posts found for that id' }
+    )
+  );
 
 });
 
