@@ -16,27 +16,17 @@ class PostsIndex extends React.Component{
         //console.log('mounting fetch');
     }
     
-    componentWillUpdate(){
-        this.props.fetchPosts();
-    }
-
     update(field){
         return e => {
             this.setState({[field]: e.currentTarget.value});
         }
     }
 
-    handleDelete = (post, that) => (e) => {
+    handleDelete = (post) => (e) => {
         e.preventDefault();
-        debugger;
-        this.props.deletePost(post._id)
-            .then( () => console.log('promised') )
-            //.then( () => this.props.fetchPosts() )
-            //.then( () => this.props.forceUpdate() )
-        ;
-        console.log('here');
-        delete that.props.posts[0][that.props.posts[0].findIndex( ele => ele._id === post._id )]
-        that.forceUpdate();
+        this.props.deletePost(post._id);
+        this.props.fetchPosts()
+        this.forceUpdate();
     }
 
     handleSubmit(e){
@@ -69,7 +59,10 @@ class PostsIndex extends React.Component{
             let buttons = this.state.author.user === post.author.user ?
                 (<div className="comment-btn"> 
                     <button className="comment-btns edit-btn">Edit Comment</button>  
-                    <button className="comment-btns delete-btn" onClick={this.handleDelete(post, this)}>Delete Comment</button>
+                    
+                    <button className="comment-btns delete-btn" 
+                        onClick={this.handleDelete(post)}>Delete Comment
+                    </button>
 
                 </div>) : (null);
 
