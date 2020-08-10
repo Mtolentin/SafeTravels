@@ -11,11 +11,18 @@ class ArticlesIndex extends React.Component{
         };
         this.update = this.update.bind(this);
         this.showComments = this.showComments.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);        
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.rerenderParentCallback = this.rerenderParentCallback.bind(this);        
     }
 
     componentDidMount(){
         this.props.fetchArticles();
+    }
+
+    rerenderParentCallback() {
+        this.forceUpdate();
+        //debugger;
+        console.log("Should be something");
     }
 
     update(field){
@@ -70,7 +77,10 @@ class ArticlesIndex extends React.Component{
                     <div className={`comments-section ${revealComments}`}>
                         <button className="show-comments" onClick={() => this.showComments('')}>Hide Comments</button> 
                         <h4>Comments</h4>
-                        <PostIndexContainer articleID={article._id} />
+                        <PostIndexContainer 
+                            articleID={article._id} 
+                            rerenderParentCallback={this.rerenderParentCallback}
+                        />
                     </div>
                     
                 </li>
