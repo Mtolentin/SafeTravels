@@ -14,24 +14,6 @@ class SideNav extends React.Component {
         return (
             <div className="wrapper">
                 <nav id="sidebar">
-                    <div className="sidebar-header">
-
-
-                        
-                        <button type="button" id="sidebarCollapse" 
-                        className="btn btn-info">
-                            <span>Toggle Sidebar</span>
-                        </button>
-                        <button className="btn btn-dark d-inline-block d-lg-none ml-auto" 
-                            type="button" data-toggle="collapse" 
-                            data-target="#navbarSupportedContent" 
-                            aria-controls="navbarSupportedContent" 
-                            aria-expanded="false" 
-                            aria-label="Toggle navigation">
-                        </button>
-
-                        
-                    </div>
                     <ul className="list-unstyled components">
                         <li>
                             <a href="#pageSubmenu1" data-toggle="collapse" 
