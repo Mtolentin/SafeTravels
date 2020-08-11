@@ -17,5 +17,6 @@ export const patchPost = (data, post) => {
 };
 
 export const deletePost = postId => {
+    // debugger;
     return axios.delete(`/api/posts/${postId}`);
 };

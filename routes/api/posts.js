@@ -60,11 +60,13 @@ router.delete('/:id', function (req, res) {
   
   //console.log(req);
   Post.deleteOne( { _id: req.params.id } )
+    .then(() => res.json({success: 'deletion successful'}))
     .catch(err =>
       res.status(404).json({ nopostsfound: 'No posts found for that id' }
     )
   );
-
+  // console.log(req);
+  // console.log(res);
   console.log('item deleted');
 
 });
@@ -72,6 +74,7 @@ router.delete('/:id', function (req, res) {
 router.patch('/:id', function (req, res) {
 
   Post.updateOne( { text: req.body.text } )
+    .then(() => res.json({success: 'update successful'}))  
     .catch(err =>
       res.status(404).json({ nopostsfound: 'No posts found for that id' }
     )

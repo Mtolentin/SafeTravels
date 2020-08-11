@@ -24,8 +24,8 @@ class PostsIndex extends React.Component{
 
     handleDelete = (post) => (e) => {
         e.preventDefault();
-        this.props.deletePost(post._id);
-        this.props.fetchPosts()
+        this.props.destroyPost(post._id)
+            .then(() => this.props.fetchPosts());
         this.forceUpdate();
     }
 
