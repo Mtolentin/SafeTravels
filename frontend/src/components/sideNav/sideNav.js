@@ -34,12 +34,12 @@ class SideNav extends React.Component {
                     </div>
                     <ul className="list-unstyled components">
                         <li>
-                            <a href="#pageSubmenu" data-toggle="collapse" 
+                            <a href="#pageSubmenu1" data-toggle="collapse" 
                             aria-expanded="false" className="dropdown-toggle">
                                 Hotels
                             </a>
                             <ul className="collapse list-unstyled" 
-                                id="pageSubmenu">
+                                id="pageSubmenu1">
                                 <li>
                                     <a href="/">Test 1</a>
                                 </li>
@@ -53,12 +53,12 @@ class SideNav extends React.Component {
                         </li>
 
                         <li>
-                            <a href="#pageSubmenu" data-toggle="collapse" 
+                            <a href="#pageSubmenu2" data-toggle="collapse" 
                                 aria-expanded="false" className="dropdown-toggle">
                                     Restaurants
                             </a>
                             <ul className="collapse list-unstyled" 
-                                id="pageSubmenu">
+                                id="pageSubmenu2">
                                 <li>
                                     <a href="/">Test 1</a>
                                 </li>
@@ -72,12 +72,12 @@ class SideNav extends React.Component {
                         </li>
 
                         <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" 
+                        <a href="#pageSubmenu3" data-toggle="collapse" 
                                 aria-expanded="false" className="dropdown-toggle">
                                     Activities
                             </a>
                             <ul className="collapse list-unstyled" 
-                                id="pageSubmenu">
+                                id="pageSubmenu3">
                                 <li>
                                     <a href="/">Test 1</a>
                                 </li>
