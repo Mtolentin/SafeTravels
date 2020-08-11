@@ -49,7 +49,7 @@ export const updatePost = (data, post) => dispatch => (
         .catch(err => dispatch(receivePostErrors(err.response.data)))
 );
 
-export const deletePost = postId => dispatch => (
+export const destroyPost = postId => dispatch => (
     PostUtil.deletePost(postId)
         .then(postId => dispatch(removePost(postId)))
         .catch(err => dispatch(receivePostErrors(err.response.data)))
