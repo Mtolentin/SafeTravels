@@ -9,7 +9,7 @@ class MainPage extends React.Component {
       <div className="splash-page">
 
         <div className="splash-image">
-          <Carousel>
+          <Carousel className = "mainCar">
             <Carousel.Item>
               <img
                 className="d-block w-100 carousel-img"

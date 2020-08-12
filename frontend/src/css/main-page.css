@@ -8,10 +8,13 @@
 
 .splash-page{
     background-color: #B7AFA3;
-    width: 100%;
 }
 
 .carousel-img{
     filter: blur(2.5px);
     -webkit-filter: blur(2.5px);    
 }
+
+/* .splash-image{
+    height: 100%;
+} */

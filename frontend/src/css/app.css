@@ -30,3 +30,25 @@ span, article, footer, time, small, h3, select {
     justify-content: space-around;
     background-color: #B7AFA3;
 }
+
+.appTop{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.appMain{
+    margin-top: 73px;
+}
+
+.theCar{
+    width: 100%;
+}
+
+.appBot{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
