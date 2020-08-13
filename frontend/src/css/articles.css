@@ -77,10 +77,9 @@
     flex-direction: column;
 }
 
-.articles-main{
-    overflow: auto;
-}
+
 
 .articles-list{
-    overflow: auto;
+    /* overflow: scroll; */
 }
+

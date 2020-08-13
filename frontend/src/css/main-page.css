@@ -17,7 +17,10 @@
 
 .carousel-img{
     filter: blur(2.5px);
-    -webkit-filter: blur(2.5px);    
+    -webkit-filter: blur(2.5px);
+    height: 100%;
+    object-fit: cover;
+
 }
 
 .splash-image{
@@ -35,13 +38,11 @@
 
 .d-block {
     height: 100%;
-    width: 100%;
     object-fit: cover;
-    overflow: hidden;
 }
 
-.carousel-item{
+.carousel-item.active{
     height: 100%;
-    /* width: 100%; */
-    overflow: hidden;
+    object-fit: cover;
 }
+

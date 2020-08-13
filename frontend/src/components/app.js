@@ -16,45 +16,42 @@ import ArticleIndexContainer from './articles/articles_index_container';
 
 
 const App = () => (
+
   <div className="safetravels">
 
     <div className = "appTop"> <NavBarContainer/> </div>
 
     <div className = "appMain">
 
-      <div className = "authRoutes">
-        <Switch>
-          <AuthRoute exact path="/" component={MainPage} />
-          <AuthRoute exact path="/login" component={LoginFormContainer} />
-          <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        </Switch>
-      </div>
+      <Switch>
+        <AuthRoute exact path="/" component={MainPage} />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      </Switch>
 
-      <div className="index-main">
-        <ProtectedRoute path="/index" component={SideNavContainer} /> 
-        <ProtectedRoute path="/index" component={MapContainer} />
-        <ProtectedRoute path="/index" component={ArticleIndexContainer} /> 
-      </div>
-      <div className="restaurant-main">
-        <ProtectedRoute path="/restaurants" component={SideNavContainer} />
-        <ProtectedRoute path="/restaurants" component={RestaurantContainer} />
-        <ProtectedRoute path="/restaurants" component={ArticleIndexContainer} /> 
-      </div>
-      <div className="hotel-main">
+      <div className="one-main">
+        <ProtectedRoute path="/index" component={SideNavContainer} />
         <ProtectedRoute path="/hotels" component={SideNavContainer} />
-        <ProtectedRoute path="/hotels" component={HotelContainer} />
-        <ProtectedRoute path="/hotels" component={ArticleIndexContainer} />
-      </div>
-      <div className="activity-main">
+        <ProtectedRoute path="/restaurants" component={SideNavContainer} />
         <ProtectedRoute path="/activities" component={SideNavContainer} />
-        <ProtectedRoute path="/activities" component={ActivityContainer} />
+        
+        <div className="theMiddle">
+          <ProtectedRoute path="/index" component={MapContainer} />
+          <ProtectedRoute path="/hotels" component={HotelContainer} />
+          <ProtectedRoute path="/restaurants" component={RestaurantContainer} />
+          <ProtectedRoute path="/activities" component={ActivityContainer} />
+        </div>
+
+        <ProtectedRoute path="/index" component={ArticleIndexContainer} /> 
+        <ProtectedRoute path="/hotels" component={ArticleIndexContainer} />
+        <ProtectedRoute path="/restaurants" component={ArticleIndexContainer} /> 
         <ProtectedRoute path="/activities" component={ArticleIndexContainer} />
       </div>
 
     </div>
-
-      <div className = "appBot"><Footer/></div> 
-
+    
+    <div className = "appBot"><Footer/></div> 
+  
   </div> 
 );
 
