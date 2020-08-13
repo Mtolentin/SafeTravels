@@ -33,7 +33,7 @@ span, article, footer, time, small, h3, select {
 .restaurant-main,
 .hotel-main,
 .activity-main {
-    display: flex;
+    display: grid;
     justify-content: space-around;
     background-color: #B7AFA3;
     grid-template-columns: repeat(5, 1fr);
@@ -54,6 +54,10 @@ span, article, footer, time, small, h3, select {
     grid-row: 2 / 16;
     overflow: hidden;
     display: grid;
+}
+
+.authRoutes{
+    height: 100%;
 }
 
 
