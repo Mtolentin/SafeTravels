@@ -36,6 +36,8 @@ span, article, footer, time, small, h3, select {
     display: flex;
     justify-content: space-around;
     background-color: #B7AFA3;
+    grid-template-columns: repeat(5, 1fr);
+    overflow: scroll;
 }
 
 .appTop{
@@ -51,6 +53,7 @@ span, article, footer, time, small, h3, select {
     /* margin-top: 73px; */
     grid-row: 2 / 16;
     overflow: hidden;
+    display: grid;
 }
 
 

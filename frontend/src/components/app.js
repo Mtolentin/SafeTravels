@@ -22,11 +22,13 @@ const App = () => (
 
     <div className = "appMain">
 
-      <Switch>
-        <AuthRoute exact path="/" component={MainPage} />
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      </Switch>
+      <div className = "authRoutes">
+        <Switch>
+          <AuthRoute exact path="/" component={MainPage} />
+          <AuthRoute exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        </Switch>
+      </div>
 
       <div className="index-main">
         <ProtectedRoute path="/index" component={SideNavContainer} /> 
