@@ -5,7 +5,7 @@ class Footer extends React.Component{
         return(
             <div className="footer-bar">
                 <footer className="copyright">
-                <p id="copyright-text">Copyright &copy; 2020</p>
+                    <p id="copyright-text">Copyright &copy; 2020</p>
                 </footer>
             </div>
         );

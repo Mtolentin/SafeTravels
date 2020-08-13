@@ -8,10 +8,40 @@
 
 .splash-page{
     background-color: #B7AFA3;
-    width: 100%;
+    height: 100%;
+}
+
+.carousel{
+    height: 100%;
 }
 
 .carousel-img{
     filter: blur(2.5px);
     -webkit-filter: blur(2.5px);    
+}
+
+.splash-image{
+    height: 100%;
+}
+
+.carousel-inner{
+    height: 100%;
+    width: auto !important;
+}
+
+.carousel-caption{
+    bottom: 1% !important;
+}
+
+.d-block {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.carousel-item{
+    height: 100%;
+    /* width: 100%; */
+    overflow: hidden;
 }

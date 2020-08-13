@@ -30,7 +30,7 @@ class IndexCarousel extends React.Component{
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  className="d-block mw-25 mh-25 carousel-img"
+                  className="d-block mw-auto mh-auto carousel-img"
                   src="https://www.allworship.com/wp-content/uploads/2015/06/bigstock-Work-In-Progress-Concept-73569091-640x582.jpg"
                   alt="Third slide"
                 />

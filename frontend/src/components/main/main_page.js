@@ -9,21 +9,23 @@ class MainPage extends React.Component {
       <div className="splash-page">
 
         <div className="splash-image">
-          <Carousel>
+          <Carousel className = "mainCar">
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-img"
+                className="d-block carousel-img"
                 src="https://images.wallpaperscraft.com/image/street_traffic_urban_123634_800x600.jpg"
                 alt="First slide"
               />
-              <Carousel.Caption>
-                <h3>Restaruants</h3>
-                <p>See which restaruants are still open during the pandemic.</p>
-              </Carousel.Caption>
+              <div className="mainCap">
+                <Carousel.Caption>
+                  <h3>Restaruants</h3>
+                  <p>See which restaruants are still open during the pandemic.</p>
+                </Carousel.Caption>
+              </div>
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-img"
+                className="d-block carousel-img"
                 src="https://www.sfexaminer.com/wp-content/uploads/2019/02/f.WalkSF.0715.jpg"
                 alt="Second slide"
               />
@@ -35,7 +37,7 @@ class MainPage extends React.Component {
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block w-100 carousel-img"
+                className="d-block carousel-img"
                 src="https://media.atre.yardi.com/2/68521/images/San-Francisco-Proper-Hotel.jpg"
                 alt="Third slide"
               />

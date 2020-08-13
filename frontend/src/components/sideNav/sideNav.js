@@ -14,32 +14,14 @@ class SideNav extends React.Component {
         return (
             <div className="wrapper">
                 <nav id="sidebar">
-                    <div className="sidebar-header">
-
-
-                        
-                        <button type="button" id="sidebarCollapse" 
-                        className="btn btn-info">
-                            <span>Toggle Sidebar</span>
-                        </button>
-                        <button className="btn btn-dark d-inline-block d-lg-none ml-auto" 
-                            type="button" data-toggle="collapse" 
-                            data-target="#navbarSupportedContent" 
-                            aria-controls="navbarSupportedContent" 
-                            aria-expanded="false" 
-                            aria-label="Toggle navigation">
-                        </button>
-
-                        
-                    </div>
                     <ul className="list-unstyled components">
                         <li>
-                            <a href="#pageSubmenu" data-toggle="collapse" 
+                            <a href="#pageSubmenu1" data-toggle="collapse" 
                             aria-expanded="false" className="dropdown-toggle">
                                 Hotels
                             </a>
                             <ul className="collapse list-unstyled" 
-                                id="pageSubmenu">
+                                id="pageSubmenu1">
                                 <li>
                                     <a href="/">Test 1</a>
                                 </li>
@@ -53,12 +35,12 @@ class SideNav extends React.Component {
                         </li>
 
                         <li>
-                            <a href="#pageSubmenu" data-toggle="collapse" 
+                            <a href="#pageSubmenu2" data-toggle="collapse" 
                                 aria-expanded="false" className="dropdown-toggle">
                                     Restaurants
                             </a>
                             <ul className="collapse list-unstyled" 
-                                id="pageSubmenu">
+                                id="pageSubmenu2">
                                 <li>
                                     <a href="/">Test 1</a>
                                 </li>
@@ -72,12 +54,12 @@ class SideNav extends React.Component {
                         </li>
 
                         <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" 
+                        <a href="#pageSubmenu3" data-toggle="collapse" 
                                 aria-expanded="false" className="dropdown-toggle">
                                     Activities
                             </a>
                             <ul className="collapse list-unstyled" 
-                                id="pageSubmenu">
+                                id="pageSubmenu3">
                                 <li>
                                     <a href="/">Test 1</a>
                                 </li>

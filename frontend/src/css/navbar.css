@@ -2,9 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
-    border-bottom: 2px solid gray;
-    background-color:#E8D0A9; 
+    padding: 0px !important;
+    /* border-bottom: 2px solid gray; */
+    margin-bottom: 0px !important;
+    background-color:#E8D0A9 !important;
+    height: 100%;
 }
 
 .links{

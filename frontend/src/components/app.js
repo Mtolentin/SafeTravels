@@ -17,12 +17,17 @@ import ArticleIndexContainer from './articles/articles_index_container';
 
 const App = () => (
   <div className="safetravels">
-    <NavBarContainer />
-    <Switch>
-      <AuthRoute exact path="/" component={MainPage} />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    </Switch>
+
+    <div className = "appTop"> <NavBarContainer/> </div>
+
+    <div className = "appMain">
+
+      <Switch>
+        <AuthRoute exact path="/" component={MainPage} />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      </Switch>
+
       <div className="index-main">
         <ProtectedRoute path="/index" component={SideNavContainer} /> 
         <ProtectedRoute path="/index" component={MapContainer} />
@@ -43,7 +48,11 @@ const App = () => (
         <ProtectedRoute path="/activities" component={ActivityContainer} />
         <ProtectedRoute path="/activities" component={ArticleIndexContainer} />
       </div>
-      <Footer /> 
+
+    </div>
+
+      <div className = "appBot"><Footer/></div> 
+
   </div> 
 );
 
