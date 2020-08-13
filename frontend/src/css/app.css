@@ -29,16 +29,6 @@ span, article, footer, time, small, h3, select {
     background-color: #B7AFA3;
 }
 
-.index-main,
-.restaurant-main,
-.hotel-main,
-.activity-main {
-    display: grid;
-    justify-content: space-around;
-    background-color: #B7AFA3;
-    grid-template-columns: repeat(5, 1fr);
-    overflow: scroll;
-}
 
 .appTop{
     /* position: fixed; */
@@ -53,11 +43,33 @@ span, article, footer, time, small, h3, select {
     /* margin-top: 73px; */
     grid-row: 2 / 16;
     overflow: hidden;
-    display: grid;
 }
 
-.authRoutes{
-    height: 100%;
+.one-main{
+    min-height: 0px;
+    justify-content: space-around;
+    background-color: #B7AFA3;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.theLeft{
+    grid-column: 1 / 2;
+}
+
+.theMiddle{
+    grid-column: 2 / 8;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    max-height: 87vh;
+}
+
+.articles-main{
+    grid-column: 8 / 11;
+    max-height: 87vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 
@@ -69,26 +81,3 @@ span, article, footer, time, small, h3, select {
     bottom: 0;
     grid-row: 16 / 17;
 }
-
-
-/* .appTop{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-.appMain{
-    margin-top: 73px;
-}
-
-.theCar{
-    width: 100%;
-}
-
-.appBot{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 100;
-} */

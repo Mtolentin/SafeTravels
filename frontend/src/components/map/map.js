@@ -78,7 +78,7 @@ export class MapCanvas extends Component{
                             initialCenter={{ lat: 37.8, lng: -122.43}}
                             zoom={13}
                             onChildChick={this.onMapClicked}
-                            containerStyle={{position: 'relative', height: '400px', width: '600px' }}
+                            containerStyle={{position: 'relative', height: '100%', width: '100%' }}
                         >
                             {(this.props.itemType === "restaurants") ?
                                 (this.props.restaurants[0].map((restaurant, i) => 
@@ -150,8 +150,7 @@ export class MapCanvas extends Component{
                 
                         </Map>
                 </div>
-
-                <IndexCarousel />
+                {/* <IndexCarousel /> */}
             </div>
         )
     }

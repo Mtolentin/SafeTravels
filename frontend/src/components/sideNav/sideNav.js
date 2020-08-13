@@ -12,7 +12,7 @@ class SideNav extends React.Component {
 
     render() {
         return (
-            <div className="wrapper">
+            <div className="theLeft">
                 <nav id="sidebar">
                     <ul className="list-unstyled components">
                         <li>
