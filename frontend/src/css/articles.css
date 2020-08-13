@@ -7,6 +7,16 @@
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);        
 }
 
+.articles{
+    display: inline-block;
+    padding: 35px;
+    margin: 15px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);        
+    overflow: auto;
+}
+
 .articles-form{
     /* display: inline-grid; */
     padding: 35px;
@@ -65,4 +75,12 @@
 .article-form-content{
     display: flex;
     flex-direction: column;
+}
+
+.articles-main{
+    overflow: auto;
+}
+
+.articles-list{
+    overflow: auto;
 }
