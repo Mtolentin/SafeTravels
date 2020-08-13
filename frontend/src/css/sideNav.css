@@ -16,8 +16,8 @@ p {
     color: #999;
 }
 
-a {
-    color: lightcoral !important;
+#sidebar a {
+    color: skyblue !important;
     text-decoration: none;
     background-color: transparent;
 }
@@ -74,6 +74,7 @@ span {
 
 #sidebar {
     width: 100%;
+    height: 100%;
     background: #E8D0A9;
     color: #fff;
     transition: all 0.3s;
