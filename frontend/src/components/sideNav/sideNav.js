@@ -86,8 +86,8 @@ class SideNav extends React.Component {
                     <img className="anItemPic"
                         src={`${activity.pictureURL}`}>
                     </img>
-                    <h3 classname="anItemName">{activity.name}</h3>
-                    <p classname="anItemDescription">{activity.description}</p>
+                    <h3 className="anItemName">{activity.name}</h3>
+                    <p className="anItemDescription">{activity.description}</p>
                 </a>
             )
         })
@@ -126,7 +126,7 @@ class SideNav extends React.Component {
             <div className="theLeft">
                 <nav id="sidebar">
                     <ul className="list-unstyled components">
-                        <li>
+                        <li className = "itemList">
                             <a href="#pageSubmenu1" data-toggle="collapse" 
                             aria-expanded="false" className="dropdown-toggle">
                                 Hotels
@@ -137,7 +137,7 @@ class SideNav extends React.Component {
                             </ul>
                         </li>
 
-                        <li>
+                        <li className = "itemList">
                             <a href="#pageSubmenu2" data-toggle="collapse" 
                                 aria-expanded="false" className="dropdown-toggle">
                                     Restaurants
@@ -148,8 +148,8 @@ class SideNav extends React.Component {
                             </ul>
                         </li>
 
-                        <li>
-                        <a href="#pageSubmenu3" data-toggle="collapse" 
+                        <li className = "itemList">
+                            <a href="#pageSubmenu3" data-toggle="collapse" 
                                 aria-expanded="false" className="dropdown-toggle">
                                     Activities
                             </a>
