@@ -97,6 +97,7 @@ span {
 
 #sidebar ul li a {
     text-align: left;
+    text-shadow: 1.5px 1.5px grey;
 }
 
 #sidebar.active ul li a {
