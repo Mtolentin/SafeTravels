@@ -40,5 +40,14 @@ const HotelSchema = new Schema({
         required: true
     },
 
+    link1: {
+        type: String,
+        required: true
+    },
+
+    link2: {
+        type: String,
+    },
+
 })
 module.exports = Hotel = mongoose.model('Hotel', HotelSchema);
