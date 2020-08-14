@@ -139,6 +139,7 @@ span {
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
+    overflow: scroll;
 }
 
 #sidebar ul li a {
@@ -203,13 +204,28 @@ a.article:hover {
     color: #E8D0A9 !important;
 }
 
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
-
 #content {
     width: 100%;
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
+}
+
+.list-unstyled{
+    max-height: 90vh;
+    overflow: scroll;
+}
+
+h3.anItemName{
+    color: darksalmon;
+    font-size: 19px;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-shadow: 0.5px 0.5px grey;
+}
+
+p.anItemDescription{
+    color: darkslategrey;
+    font-size: 14px;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-shadow: 0.5px 0.5px grey;
 }
