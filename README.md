@@ -1,6 +1,6 @@
 # SafeTravels
 
-[Live Site](http://safe-travels-aa.herokuapp.com/#/)
+[Live Site](http://safe-travels-aa.herokuapp.com/#/login)
 
 ## Overview
 
